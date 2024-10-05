@@ -1,7 +1,7 @@
 
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { errorToast } from 'services/services';
+import { errorToast } from './../../services/services';
 
 export const BASE_URL = 'https://backend-readjourney.onrender.com/';
 axios.defaults.baseURL = BASE_URL;
