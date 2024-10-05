@@ -6,63 +6,86 @@ axios.defaults.baseURL =import.meta.env.VITE_BASE_URL;
 
 
 
-export const getRecommendedThunk = createAsyncThunk(
-  'books/getRecommended',
-  async (_, thunkAPI) => {
+export const getBookByISBNThunk = createAsyncThunk(
+  'books/getBookByISBN',
+  async (isbn, thunkAPI) => {
     try {
-      const { data } = await axios.get(`/books`);
+      const { data } = await axios.get(`/books/${isbn}`);
       return data;
-    }catch (error) {
+    } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
 
 export const getFavoritesThunk = createAsyncThunk(
-  'favorites/getFavorites',
+  'books/getFavorites',
   async (_, thunkAPI) => {
     try {
-      const { data } = await axios.get(`favorites`);
+      const { data } = await axios.get(`/books/favorites`);
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }
-)
+);
 
-export const addFavoriteCamperThunk = createAsyncThunk(
-  'favorites/addFavorite',
-  async (_Id, thunkAPI) => {
+export const getBookByIdThunk = createAsyncThunk(
+  'books/getBookById',
+  async (bookId, thunkAPI) => {
     try {
-      const response = await axios.post('favorites/add', { id: _Id });
-      return response.data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-)
-
-export const removeFavoriteThunk = createAsyncThunk(
-  'favorites/removeFavorite',
-  async (_Id, thunkAPI) => {
-    try {
-      const response = await axios.delete(`/favorites/${_Id}`);
-      return response.data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-)
-
-
-export const refreshFavoritesThunk = createAsyncThunk(
-  'favorites/refreshFavorites',
-  async (_, thunkAPI) => {
-    try {
-      const { data } = await axios.get(`/favorites`);
+      const { data } = await axios.get(`/books/favorites/${bookId}`);
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }
-)
+);
+
+export const addFavoriteBookThunk = createAsyncThunk(
+  'books/addFavoriteBook',
+  async (bookId, thunkAPI) => {
+    try {
+      const { data } = await axios.post(`/books/favorites/${bookId}`);
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const removeFavoriteBookThunk = createAsyncThunk(
+  'books/removeFavoriteBook',
+  async (bookId, thunkAPI) => {
+    try {
+      const { data } = await axios.delete(`/books/favorites/${bookId}`);
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const updateCurrentPageThunk = createAsyncThunk(
+  'books/updateCurrentPage',
+  async ({ bookId, page }, thunkAPI) => {
+    try {
+      const { data } = await axios.patch(`/books/favorites/${bookId}/page`, { page });
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const getCurrentPageThunk = createAsyncThunk(
+  'books/getCurrentPage',
+  async (bookId, thunkAPI) => {
+    try {
+      const { data } = await axios.get(`/books/favorites/${bookId}/page`);
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
