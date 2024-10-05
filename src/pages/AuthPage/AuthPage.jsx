@@ -4,7 +4,7 @@
 const FirstPage = () => {
   return (
     <div>
-      <h2>First Page</h2>
+      <h2>Auth Page</h2>
       
     </div>
   );

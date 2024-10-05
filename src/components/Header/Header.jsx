@@ -5,13 +5,15 @@ export const Header = () => {
   return (
     <div>
       <nav>
-        <NavLink to="/first">
-          
-          First
+        
+        <NavLink to="/">
+          Home
         </NavLink>
-        <NavLink to="/second">
-          
-          Second
+        <NavLink to="/library">
+          Library
+        </NavLink>
+        <NavLink to="/auth">
+          AuthPage
         </NavLink>
       </nav>
     </div>
