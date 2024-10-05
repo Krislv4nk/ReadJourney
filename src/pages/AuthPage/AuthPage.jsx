@@ -1,7 +1,7 @@
 
 
 
-const FirstPage = () => {
+const AuthPage = () => {
   return (
     <div>
       <h2>Auth Page</h2>
@@ -10,4 +10,4 @@ const FirstPage = () => {
   );
 };
 
-export default FirstPage;
+export default AuthPage;
