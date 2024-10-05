@@ -1,10 +1,10 @@
 
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { errorToast } from './../../services/services';
+import { errorToast } from '../../helpers/services';
 
-export const BASE_URL = 'https://backend-readjourney.onrender.com/';
-axios.defaults.baseURL = BASE_URL;
+
+axios.defaults.baseURL =import.meta.env.VITE_BASE_URL;
 
 const setToken = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
