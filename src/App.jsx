@@ -15,6 +15,7 @@ import ErrorPage from 'pages/ErrorPage/ErrorPage';
 
 import PrivateRoute from 'components/PrivateRoute/PrivateRoute';
 import PublicRoute from './components/PublicRoute/PublicRoute';
+import CircularProgressWithLabel from './components/CircularProgressWithLabel/CircularProgressWithLabel'
 
 function App() {
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ function App() {
   }, [dispatch]);
 
   if (isFetchingCurrentUser) {
-    return <p>Loading...</p>; 
+    return <CircularProgressWithLabel/>; 
   }
 
   return (
