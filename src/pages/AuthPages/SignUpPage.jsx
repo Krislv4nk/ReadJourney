@@ -1,13 +1,15 @@
 
 import Container from "../../components/Container/Container";
+import CircularProgressWithLabel from "../../components/CircularProgressWithLabel/CircularProgressWithLabel";
 
 const SignUpPage = () => {
   return (
-    <div>
+    
       <Container>
-      <h2>SignUpPage</h2>
+        <h2>SignUpPage</h2>
+        <CircularProgressWithLabel/>
       </Container>
-    </div>
+    
   );
 };
 
