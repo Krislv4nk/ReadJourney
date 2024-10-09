@@ -57,7 +57,7 @@ const authSlice = createSlice({
       })
 
       .addCase(updateFavoritesBooksThunk.fulfilled, (state, { payload }) => {
-        state.user.waterRate = payload.waterRate;
+        state.user.FavoritesBooks = payload.FavoritesBooks;
       })
 
           .addCase(refreshUser.pending, (state, action) => {
