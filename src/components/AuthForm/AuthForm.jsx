@@ -60,29 +60,28 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
         
           <Form>
             {isSignUp && (
-              <div>
-                <label className={css.label} htmlFor="name">Name</label>
-                <Field type="text" name="name" className={css.field} placeholder="YourName" autoComplete="name" />
+              <div className={css.passwordContainer}>
+              <Field type="text" name="name" className={css.field} placeholder=" " autoComplete="name" />
+               <label className={css.label} htmlFor="name">Name: <span>YourName</span></label>
                 <ErrorMessage name="name" component="div" />
               </div>
             )}
-            <div>
-              <label className={css.label} htmlFor="mail">Mail</label>
+            <div className={css.passwordContainer}>
               <Field
                 type="email"
                 name="mail"
                 className={css.field}
-                placeholder="Your@email.com"
+                placeholder=" "
                 autoComplete="email"
-              />
+            />
+            <label className={css.label} htmlFor="mail">Mail: <span>Your@email.com</span></label>
               <ErrorMessage name="mail" component="div" />
             </div>
             {(!isForgotPassword || isRecoverPassword) && (
               <div className={css.passwordContainer}>
-                <label className={css.label} htmlFor="password">Password</label>
                 <Field
                   type={lookPassword ? 'text' : 'password'}
-                  placeholder="Yourpasswordhere"
+                  placeholder=" "
                   className={css.field}
                   name="password"
                   autoComplete="password"
@@ -91,7 +90,8 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
                   <svg className={css.passwordIcon}>
                     <use href={`${icons}#icon-${lookPassword ? 'eye' : 'eye-off'}`} />
                   </svg>
-                </button>
+              </button>
+              <label className={css.label} htmlFor="password">Password: <span>Yourpasswordhere</span></label>
                 <ErrorMessage name="password" component="div" />
               </div>
             )}
