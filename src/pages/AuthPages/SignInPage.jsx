@@ -1,10 +1,13 @@
+import Container from "../../components/Container/Container";
+import {AuthBackground} from "../../components/AuthBackground/AuthBackground";
+
 
 const SignInPage = () => {
   return (
-    <div>
-      <h2>SignInPage</h2>
-      
-    </div>
+    <Container>
+        <h2>SignInPage</h2>
+        <AuthBackground/>
+      </Container>
   );
 };
 

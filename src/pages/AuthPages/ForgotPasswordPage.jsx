@@ -1,11 +1,14 @@
+import Container from "../../components/Container/Container";
+import {AuthBackground} from "../../components/AuthBackground/AuthBackground";
+
 
 
 const ForgotPasswordPage = () => {
   return (
-    <div>
-      <h2>ForgotPasswordPage</h2>
-      
-    </div>
+    <Container>
+        <h2>ForgotPasswordPage</h2>
+        <AuthBackground/>
+      </Container>
   );
 };
 

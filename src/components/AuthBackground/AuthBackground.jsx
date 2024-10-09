@@ -10,7 +10,7 @@ export const AuthBackground = () => {
                 <svg className={css.logo}>
           <use xlinkHref={`${sprite}#icon-logo`}></use>
                 </svg>
-                <p className={css.title}>Expand your mind, reading <span className={css.titleSpan}>a book</span></p>
+                <h2 className={css.title}>Expand your mind, reading <span className={css.titleSpan}>a book</span></h2>
             </div>
             <div className={css.iphoneWrapper}>
                 <img src={iphone} alt="iphone" className={css.iphone} />

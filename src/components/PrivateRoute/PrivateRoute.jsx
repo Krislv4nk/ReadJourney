@@ -1,5 +1,5 @@
 
-import { selectAuthIsSignedIn } from '../../../redux/auth/selectors';
+import { selectAuthIsSignedIn } from '../../redux/auth/selectors';
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
