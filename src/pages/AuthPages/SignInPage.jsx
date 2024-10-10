@@ -7,7 +7,6 @@ const SignInPage = () => {
   
   return (
     <Container>
-        <h2>SignInPage</h2>
       <AuthBackground />
       <AuthForm isSignUp={false} isForgotPassword={false} isRecoverPassword={false}/>
       </Container>

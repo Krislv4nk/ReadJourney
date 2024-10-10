@@ -94,20 +94,21 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
               <label className={css.label} htmlFor="password">Password: <span>Yourpasswordhere</span></label>
                 <ErrorMessage name="password" component="div" />
               </div>
-            )}
+          )}
+          <div className={css.linkWrapper}>
             <button className={css.formBtn} type="submit">
-              {isSignUp ? 'Sign Up' : isForgotPassword ? 'Send Reset Link' : isRecoverPassword ? 'Recover Password' : 'Signin'}
+              {isSignUp ? 'Sign Up' : isForgotPassword ? 'Reset' : isRecoverPassword ? 'Recover Password' : 'Signin'}
             </button>
 
             <div className={css.linksContainer}>
               {!isSignUp && !isForgotPassword && !isRecoverPassword && (
                 <Link to="/signup" className={css.link}>
-                  Do not have an account? Sign up
+                  Do not have an account?<br/>
                 </Link>
               )}
               {isSignUp && (
                 <Link to="/signin" className={css.link}>
-                  Already have an account? Signin
+                  Already have an account?<br/>
                 </Link>
               )}
               {!isForgotPassword && !isRecoverPassword && (
@@ -115,6 +116,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
                   Forgot Password?
                 </Link>
               )}
+            </div>
             </div>
           </Form>
       </Formik>
