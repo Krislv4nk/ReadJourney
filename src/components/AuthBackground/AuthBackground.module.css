@@ -1,7 +1,69 @@
 
  @media screen and (min-width: 320px) and (max-width: 374.99px) {
-  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 42px;
+    height: 17px;
+  }
+
+  .formWrapper {
+    border-radius: 30px;
+    width: 100%;
+    max-width: 335px; 
+    height: 411px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px 20px 20px;
+    background-color: var(--primary-color-dark-gray);
+    position: relative;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 24px; 
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    color: var(--primary-color-white);
+    margin-top: 20px; 
+    height: auto;
+    width: 100%; 
+    margin-bottom: 10px; 
+  }
+
+  .titleSpan {
+    color: var(--primary-color-text);
+    font-weight: 700;
+    font-size: 24px; 
+    line-height: 100%;
+    letter-spacing: 0.02em;
+  }
+
+  .iphoneWrapper {
+    border-radius: 30px;
+    width: 100%;
+    max-width: 335px; 
+    height: 411px; 
+    background-color: var(--primary-color-dark-gray);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .iphone {
+    width: 80%;
+    height: auto; 
+    max-width: 255px;
+max-height: 351px;
+  }
 }
+
 
 
   @media screen and (min-width: 375px) {

@@ -58,7 +58,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
         onSubmit={handleSubmit}
       >
         
-          <Form>
+          <Form className={css.form}>
             {isSignUp && (
               <div className={css.passwordContainer}>
               <Field type="text" name="name" className={css.field} placeholder=" " autoComplete="name" />
