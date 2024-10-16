@@ -1,0 +1,40 @@
+
+@media screen and (min-width: 320px) and (max-width: 374.99px) {
+
+    .langBtn {
+width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color-dark-gray);
+    }
+
+    .langIcon {
+     width: 24px;
+    height: 24px;
+    fill: var(--primary-color-white);
+    }
+}
+
+
+@media screen and (min-width: 375px) {
+    .langBtn {
+width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color-dark-gray);
+    }
+
+    .langIcon {
+     width: 24px;
+    height: 24px;
+    fill: var(--primary-color-white);
+    }
+}

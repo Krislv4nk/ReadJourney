@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { refreshUser } from './redux/auth/operations';
 import { selectAuthIsRefreshing } from './redux/auth/selectors';
+import  '../src/helpers/i18n';
 
 import SharedLayout from 'components/SharedLayout/SharedLayout';
 import SignUpPage from 'pages/AuthPages/SignUpPage';

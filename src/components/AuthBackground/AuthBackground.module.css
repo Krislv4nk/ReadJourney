@@ -19,22 +19,6 @@
     height: 17px;
   }
 
-  .langBtn {
-width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    outline: none;
-    background-color: var(--primary-color-dark-gray);
-    }
-
-    .langIcon {
-     width: 24px;
-    height: 24px;
-    fill: var(--primary-color-white);
-    }
 
   .formWrapper {
     border-radius: 30px;
@@ -99,7 +83,7 @@ flex-direction: column;
 gap:10px;
     }
 
-    .logoWrapper {
+.logoWrapper {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -111,22 +95,7 @@ height: 17px;
 
     }
 
-    .langBtn {
-width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    outline: none;
-    background-color: var(--primary-color-dark-gray);
-    }
 
-    .langIcon {
-     width: 24px;
-    height: 24px;
-    fill: var(--primary-color-white);
-    }
 
  .formWrapper {
     border-radius: 30px;

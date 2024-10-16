@@ -2,6 +2,7 @@
 import css from './AuthBackground.module.css';
 import iphone from '../../assets/images/iPhone.png';
 import sprite from '../../assets/icons/sprite.svg';
+import { LanguageSwitcher } from "../LanguageSwitcher/LanguageSwitcher";
 
 export const AuthBackground = () => {
     return (
@@ -10,12 +11,8 @@ export const AuthBackground = () => {
                 <div className={css.logoWrapper}>
                 <svg className={css.logo}>
           <use xlinkHref={`${sprite}#icon-logo`}></use>
-                </svg>
-                <button type="button" className={css.langBtn} title='language'>
-                  <svg className={css.langIcon}>
-                    <use href={`${sprite}#icon-language`} />
-                  </svg>
-                    </button>
+                    </svg>
+                    <LanguageSwitcher/>
                     </div>
                 <h2 className={css.title}>Expand your mind, reading <span className={css.titleSpan}>a book</span></h2>
 
