@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import icons from './../../assets/icons/sprite.svg';
+import sprite from './../../assets/icons/sprite.svg';
 import css from './AuthForm.module.css';
 
 export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPassword }) => {
@@ -88,7 +88,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
                 />
                 <button type="button" className={css.passwordBtn} onClick={passwordVisible}>
                   <svg className={css.passwordIcon}>
-                    <use href={`${icons}#icon-${lookPassword ? 'eye' : 'eye-off'}`} />
+                    <use href={`${sprite}#icon-${lookPassword ? 'eye' : 'eye-off'}`} />
                   </svg>
               </button>
               <label className={css.label} htmlFor="password">Password: <span>Yourpasswordhere</span></label>
