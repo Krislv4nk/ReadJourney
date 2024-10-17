@@ -2,7 +2,7 @@
 import css from './AuthBackground.module.css';
 import iphone from '../../assets/images/iPhone.png';
 import sprite from '../../assets/icons/sprite.svg';
-import { LanguageSwitcher } from "../LanguageSwitcher/LanguageSwitcher";
+import LanguageSwitcher  from "../LanguageSwitcher/LanguageSwitcher";
 
 export const AuthBackground = () => {
     return (
