@@ -15,52 +15,57 @@
  
 
   .label {
-   
     font-weight: 500;
     font-size: 12px;
     line-height: 133%;
     letter-spacing: -0.02em;
-    text-align: center;
     color: var(--primary-color-form-gray);
-    position: absolute;
-    top: 14px;
-    left: 14px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    padding: 0;
+    text-align: center;
   }
 
-  .field {
+  .inputContainer {
     width: 100%;
     max-width: 335px;
     border-radius: 12px;
     padding: 14px; 
     height: 44px;
     background-color: var(--primary-color-main-gray);
-    border: none;
     margin-bottom: 8px;
-    outline: none;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
   }
 
-  .label span {
+.field {
+  background-color: var(--primary-color-main-gray);
+  outline: none;
+  border: none;
+  width: 100%;
+  position: relative;
+  padding: 0;
+
+}
+
+  .field::placeholder {
     font-weight: 500;
     font-size: 12px;
     line-height: 133%;
     letter-spacing: -0.02em;
-    text-align: flex-start;
     color: var(--primary-color-white);
-    margin-left: 10px;
+    text-align: flex-start;
   }
 
-  .passwordContainer {
-    position: relative;
-    width: 100%;
-    max-width: 335px;
-  }
+  
 
   .passwordBtn {
     width: 25px;
     height: 25px;
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 114px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,7 +95,7 @@
   .linkWrapper {
     display: flex;
     gap: 14px;
-    align-items: center;
+    align-items: center;justify-content: flex-start;
     width: 100%;
     max-width: 335px;
   }
@@ -102,7 +107,6 @@
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: var(--primary-color-form-gray);
-    text-decoration: none;
   }
 
   .linksContainer {
@@ -135,33 +139,34 @@ line-height: 133%;
 letter-spacing: -0.02em;
 text-align: center;
 color: var(--primary-color-form-gray);
-position: absolute;
-top: 14px;
-left: 14px;
     }
 
-    .field {
+    .inputContainer {
         border-radius: 12px;
 padding: 14px;
 width: 295px;
 height: 44px;
 background-color: var(--primary-color-main-gray);
-border: none;
 margin-bottom: 8px;
-outline: none;
+position: relative;
     }
-.label span {
+
+.field {
+  background-color: var(--primary-color-main-gray);
+  margin-left: 10px;
+  outline: none;
+  border: none;
+}
+
+.field::placeholder {
 font-weight: 500;
 font-size: 12px;
 line-height: 133%;
 letter-spacing: -0.02em;
 text-align: flex-start;
 color: var(--primary-color-white);
-margin-left: 10px;
 }
-    .passwordContainer {
-  position: relative;
-}
+  
 
     .passwordBtn {
   width: 35px;

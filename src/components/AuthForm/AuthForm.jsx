@@ -59,28 +59,29 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
         
           <Form className={css.form}>
             {isSignUp && (
-              <div className={css.passwordContainer}>
-              <Field type="text" name="name" className={css.field} placeholder=" " autoComplete="name" />
-               <label className={css.label} htmlFor="name">Name: <span>YourName</span></label>
+            <div className={css.inputContainer}>
+              <label className={css.label} htmlFor="name">Name:</label>
+              <Field type="text" name="name" className={css.field} placeholder="YourName" autoComplete="name" />
                 <ErrorMessage name="name" component="div" />
               </div>
             )}
-            <div className={css.passwordContainer}>
+          <div className={css.inputContainer}>
+            <label className={css.label} htmlFor="mail">Mail:</label>
               <Field
                 type="email"
                 name="mail"
                 className={css.field}
-                placeholder=" "
+                placeholder="Your@email.com"
                 autoComplete="email"
             />
-            <label className={css.label} htmlFor="mail">Mail: <span>Your@email.com</span></label>
               <ErrorMessage name="mail" component="div" />
             </div>
             {(!isForgotPassword || isRecoverPassword) && (
-              <div className={css.passwordContainer}>
+            <div className={css.inputContainer}>
+              <label className={css.label} htmlFor="password">Password:</label>
                 <Field
                   type={lookPassword ? 'text' : 'password'}
-                  placeholder=" "
+                  placeholder="Yourpasswordhere"
                   className={css.field}
                   name="password"
                   autoComplete="password"
@@ -90,7 +91,6 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
                     <use href={`${sprite}#icon-${lookPassword ? 'eye' : 'eye-off'}`} />
                   </svg>
               </button>
-              <label className={css.label} htmlFor="password">Password: <span>Yourpasswordhere</span></label>
                 <ErrorMessage name="password" component="div" />
               </div>
           )}
