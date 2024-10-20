@@ -11,14 +11,14 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
   const [lookPassword, setLookPassword] = useState(false);
 
   const initialValues = {
-    name: isSignUp ? '' : '', 
+    username: isSignUp ? '' : '', 
     mail: '',
     password: '',
   };
 
   const getValidationSchema = (isSignUp, isForgotPassword, isRecoverPassword) => 
   Yup.object().shape({
-    name: isSignUp
+    username: isSignUp
       ? Yup.string().required('Name is required')
       : Yup.string().notRequired(),
     mail: Yup.string().email('Invalid email address').required('Email is required'),
@@ -61,9 +61,9 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
           <Form className={css.form}>
             {isSignUp && (
             <div className={css.inputContainer}>
-              <label className={css.label} htmlFor="name">Name:</label>
-              <Field type="text" name="name" className={css.field} placeholder="YourName" autoComplete="name" />
-                <ErrorMessage name="name" component="div" />
+              <label className={css.label} htmlFor="username">Name:</label>
+              <Field type="text" name="username" className={css.field} placeholder="YourName" autoComplete="name" />
+                <ErrorMessage name="username" component="div" />
               </div>
             )}
           <div className={css.inputContainer}>
