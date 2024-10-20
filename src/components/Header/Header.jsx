@@ -10,10 +10,10 @@ export const Header = () => {
         <NavLink to="/library" aria-label="Library">
           Library
         </NavLink>
-        <NavLink to="/signup" aria-label="Sign Up">
+        <NavLink to="/signUp" aria-label="Sign Up">
           SignUpPage
         </NavLink>
-        <NavLink to="/signin" aria-label="Sign In">
+        <NavLink to="/signIn" aria-label="Sign In">
           SignInPage
         </NavLink>
         <NavLink to="/forgot-password" aria-label="Forgot Password">

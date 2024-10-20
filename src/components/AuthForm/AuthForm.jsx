@@ -16,28 +16,29 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
     password: '',
   };
 
-  const validationSchema = Yup.object().shape({
-  ...(isSignUp && {
-    name: Yup.string().required('Name is required'),
-  }),
-  mail: Yup.string().email('Invalid email address').required('Email is required'),
-  password: Yup.string().when([], {
-    is: () => !isForgotPassword || isRecoverPassword,
-    then: Yup.string()
-      .required('Password is required')
-      .min(8, 'Password must be at least 8 characters'),
-    otherwise: Yup.string().notRequired(),
-  }),
-});
+  const getValidationSchema = (isSignUp, isForgotPassword, isRecoverPassword) => 
+  Yup.object().shape({
+    name: isSignUp
+      ? Yup.string().required('Name is required')
+      : Yup.string().notRequired(),
+    mail: Yup.string().email('Invalid email address').required('Email is required'),
+    password: !isForgotPassword || isRecoverPassword
+      ? Yup.string()
+          .required('Password is required')
+          .min(8, 'Password must be at least 8 characters')
+      : Yup.string().notRequired(),
+  });
 
-  const handleSubmit = async (values, { setSubmitting }) => {
+
+
+  const handleAuthSubmit = async (values, { setSubmitting }) => {
   try {
     await onSubmit(values);
     setSubmitting(false);
     if (isSignUp || isRecoverPassword) {
-      navigate('/signin'); 
+      navigate('/signIn'); 
     } else {
-      navigate('/home'); 
+      navigate('/'); 
     }
   } catch (error) {
     console.error('Error:', error);
@@ -53,8 +54,8 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
     <div className={css.wrapper}>
       <Formik
         initialValues={initialValues}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}
+  validationSchema={getValidationSchema(isSignUp, isForgotPassword, isRecoverPassword)} 
+  onSubmit={handleAuthSubmit}
       >
         
           <Form className={css.form}>
@@ -71,7 +72,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
                 type="email"
                 name="mail"
                 className={css.field}
-                placeholder="Your@email.com"
+                placeholder="Your@mail.com"
                 autoComplete="email"
             />
               <ErrorMessage name="mail" component="div" />
@@ -101,12 +102,12 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
 
             <div className={css.linksContainer}>
               {!isSignUp && !isForgotPassword && !isRecoverPassword && (
-                <Link to="/signup" className={css.link}>
+                <Link to="/signUp" className={css.link}>
                   Do not have an account?<br/>
                 </Link>
               )}
               {isSignUp && (
-                <Link to="/signin" className={css.link}>
+                <Link to="/signIn" className={css.link}>
                   Already have an account?<br/>
                 </Link>
               )}

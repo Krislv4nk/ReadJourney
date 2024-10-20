@@ -18,7 +18,7 @@ export const signupUser = createAsyncThunk(
   'auth/signupUser',
   async (formData, thunkApi) => {
     try {
-      const { data } = await axios.post('/users/signup', formData);
+      const { data } = await axios.post('/users/signUp', formData);
       setToken(data.newUser.token);
       return data;
     } catch (error) {
@@ -32,7 +32,7 @@ export const signinUser = createAsyncThunk(
   'auth/signinUser',
   async (formData, thunkApi) => {
     try {
-      const { data } = await axios.post('/users/signin', formData);
+      const { data } = await axios.post('/users/signIn', formData);
       setToken(data.user.token);
       return data;
     } catch (error) {
@@ -46,7 +46,7 @@ export const signoutUser = createAsyncThunk(
   'auth/signoutUser',
   async (_, { rejectWithValue }) => {
     try {
-      await axios.post('/users/signout');
+      await axios.post('/users/signOut');
       clearToken();
       return;
     } catch (error) {
