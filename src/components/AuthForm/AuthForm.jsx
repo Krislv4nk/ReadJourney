@@ -97,7 +97,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
           )}
           <div className={css.linkWrapper}>
             <button className={css.formBtn} type="submit">
-              {isSignUp ? 'Sign Up' : isForgotPassword ? 'Reset' : isRecoverPassword ? 'Recover Password' : 'Signin'}
+              {isSignUp ? 'Sign Up' : isForgotPassword ? 'Reset' : isRecoverPassword ? 'Recover Password' : 'Sign In'}
             </button>
 
             <div className={css.linksContainer}>
