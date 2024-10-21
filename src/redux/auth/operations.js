@@ -132,6 +132,20 @@ export const recoverPassword = createAsyncThunk(
 );
 
 
+export const verifyEmail = createAsyncThunk(
+  'auth/verifyEmail',
+  async (verificationToken, thunkApi) => {
+    try {
+      const { data } = await axios.get(`/users/verify/${verificationToken}`);
+      return data;  
+    } catch (error) {
+      errorToast(error.response.data.message);
+      return thunkApi.rejectWithValue(error.message);
+    }
+  }
+);
+
+
 // export const updateUserInfoThunk = createAsyncThunk(
 //   'user/update',
 //   async ({ file, userData }, thunkApi) => {

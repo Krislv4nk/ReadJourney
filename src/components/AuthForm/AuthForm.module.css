@@ -32,7 +32,7 @@
     border-radius: 12px;
     padding: 14px; 
     height: 44px;
-    background-color: var(--primary-color-main-gray) !important;
+    background-color: var(--primary-color-main-gray);
     margin-bottom: 8px;
     display: flex;
     flex-direction: row;
@@ -41,7 +41,7 @@
   }
 
 .field {
-  background-color: var(--primary-color-main-gray) !important;
+  background-color: var(--primary-color-main-gray);
   outline: none;
   border: none;
   width: 100%;
@@ -50,7 +50,7 @@ font-weight: 500;
     font-size: 12px;
     line-height: 133%;
     letter-spacing: -0.02em;
-    color: var(--primary-color-white) !important;
+    color: var(--primary-color-white);
 }
 
   .field::placeholder {
@@ -159,13 +159,13 @@ color: var(--primary-color-form-gray);
 padding: 14px;
 width: 295px;
 height: 44px;
-background-color: var(--primary-color-main-gray) !important;
+background-color: var(--primary-color-main-gray);
 margin-bottom: 14px;
 position: relative;
     }
 
 .field {
-  background-color: var(--primary-color-main-gray) !important;
+  background-color: var(--primary-color-main-gray);
   margin-left: 10px;
   outline: none;
   border: none;
@@ -174,7 +174,7 @@ font-size: 12px;
 line-height: 133%;
 letter-spacing: -0.02em;
 text-align: flex-start;
-  color: var(--primary-color-white) !important;
+  color: var(--primary-color-white);
 }
 
 .field::placeholder {

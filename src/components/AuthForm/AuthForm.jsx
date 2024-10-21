@@ -12,7 +12,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
 
   const initialValues = {
     username: isSignUp ? '' : '', 
-    mail: '',
+    email: '',
     password: '',
   };
 
@@ -21,7 +21,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
     username: isSignUp
       ? Yup.string().required('Name is required')
       : Yup.string().notRequired(),
-    mail: Yup.string().email('Invalid email address').required('Email is required'),
+    email: Yup.string().email('Invalid email address').required('Email is required'),
     password: !isForgotPassword || isRecoverPassword
       ? Yup.string()
           .required('Password is required')
@@ -62,20 +62,20 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
             {isSignUp && (
             <div className={css.inputContainer}>
               <label className={css.label} htmlFor="username">Name:</label>
-              <Field type="text" name="username" className={css.field} placeholder="YourName" autoComplete="name" />
+              <Field type="text" name="username" className={css.field} placeholder="YourName" />
               <ErrorMessage name="username" component="div" className={css.error} />
               </div>
             )}
           <div className={css.inputContainer}>
-            <label className={css.label} htmlFor="mail">Mail:</label>
+            <label className={css.label} htmlFor="email">Mail:</label>
               <Field
                 type="email"
-                name="mail"
+                name="email"
                 className={css.field}
                 placeholder="Your@mail.com"
                 autoComplete="email"
             />
-              <ErrorMessage className={css.error} name="mail" component="div" />
+              <ErrorMessage className={css.error} name="email" component="div" />
             </div>
             {(!isForgotPassword || isRecoverPassword) && (
             <div className={css.inputContainer}>

@@ -13,7 +13,7 @@ const initialState = {
   token: null,
   user: {
     email: '',
-    name: '',
+    username: '',
     favoriteBooks: null,
   },
   isRefreshing: false,

@@ -1,7 +1,7 @@
 
 import { useDispatch } from 'react-redux';
 import { signupUser } from '../../redux/auth/operations';
-import { successToast, errorToast, infoToast } from '../../helpers/services';
+import { successToast, errorToast} from '../../helpers/services';
 
 
 import Container from "../../components/Container/Container";
@@ -18,7 +18,6 @@ const SignUpPage = () => {
       .unwrap()
       .then(() => {
         successToast('Registration Successful');
-        infoToast('Please verify your email to complete the registration.');
       })
       .catch(error => {
         errorToast(error);
