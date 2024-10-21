@@ -62,7 +62,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
             {isSignUp && (
             <div className={css.inputContainer}>
               <label className={css.label} htmlFor="username">Name:</label>
-              <Field type="text" name="username" className={css.field} placeholder="YourName" />
+              <Field type="text" name="username" className={css.field} placeholder="YourName" autoComplete="name"/>
               <ErrorMessage name="username" component="div" className={css.error} />
               </div>
             )}
@@ -87,7 +87,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
                   name="password"
                   autoComplete="password"
                 />
-                <button type="button" className={css.passwordBtn} onClick={passwordVisible}>
+                <button type="button" className={css.passwordBtn} onClick={passwordVisible} title='Password visible'>
                   <svg className={css.passwordIcon}>
                     <use href={`${sprite}#icon-${lookPassword ? 'eye' : 'eye-off'}`} />
                   </svg>
