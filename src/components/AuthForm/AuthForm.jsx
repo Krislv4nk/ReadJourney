@@ -63,7 +63,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
             <div className={css.inputContainer}>
               <label className={css.label} htmlFor="username">Name:</label>
               <Field type="text" name="username" className={css.field} placeholder="YourName" autoComplete="name" />
-                <ErrorMessage name="username" component="div" />
+              <ErrorMessage name="username" component="div" className={css.error} />
               </div>
             )}
           <div className={css.inputContainer}>
@@ -75,7 +75,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
                 placeholder="Your@mail.com"
                 autoComplete="email"
             />
-              <ErrorMessage name="mail" component="div" />
+              <ErrorMessage className={css.error} name="mail" component="div" />
             </div>
             {(!isForgotPassword || isRecoverPassword) && (
             <div className={css.inputContainer}>
@@ -92,7 +92,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
                     <use href={`${sprite}#icon-${lookPassword ? 'eye' : 'eye-off'}`} />
                   </svg>
               </button>
-                <ErrorMessage name="password" component="div" />
+                <ErrorMessage className={css.error} name="password" component="div" />
               </div>
           )}
           <div className={css.linkWrapper}>
