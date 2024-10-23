@@ -1,13 +1,14 @@
 
 
 import {useEffect} from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { NavLink, useParams, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { verifyEmail } from '../../redux/auth/operations'; 
 
 import Container from "../../components/Container/Container";
 import { AuthBackground } from "../../components/AuthBackground/AuthBackground";
-import { successToast} from '../../helpers/services';
+import { successToast } from '../../helpers/services';
+import css from './Auth.module.css';
 
 const VerifyEmailPage = () => {
   const { token } = useParams();
@@ -26,8 +27,8 @@ const VerifyEmailPage = () => {
   return (
     <Container>
       <AuthBackground />
-      <h1>Email has been successfully verified!</h1>
-      <p>You can sign in to your account</p>
+      <h3 className={css.verifyHeader}>Email has been successfully verified!</h3>
+       <NavLink to="/signIn" aria-label="Sign In">You can sign in to your account</NavLink>
     </Container>
   );
 };
