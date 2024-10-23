@@ -5,6 +5,10 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { verifyEmail } from '../../redux/auth/operations'; 
 
+import Container from "../../components/Container/Container";
+import { AuthBackground } from "../../components/AuthBackground/AuthBackground";
+import { successToast} from '../../helpers/services';
+
 const VerifyEmailPage = () => {
   const { token } = useParams();
   const dispatch = useDispatch();
@@ -12,6 +16,7 @@ const VerifyEmailPage = () => {
 
   useEffect(() => {
     dispatch(verifyEmail(token)).then(() => {
+      successToast('You can sign in to your account!');
       navigate('/signIn');
     }).catch(() => {
       navigate('/error');
@@ -19,10 +24,11 @@ const VerifyEmailPage = () => {
   }, [dispatch, token, navigate]);
 
   return (
-    <div>
+    <Container>
+      <AuthBackground />
       <h1>Email has been successfully verified!</h1>
       <p>You can sign in to your account</p>
-    </div>
+    </Container>
   );
 };
 
