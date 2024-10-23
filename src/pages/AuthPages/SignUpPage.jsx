@@ -16,7 +16,7 @@ const SignUpPage = () => {
     dispatch(signupUser(formData))
       .unwrap()
       .then(() => {
-  successToast('Registration successful!');
+  successToast('Registration successful! Please, confirm email for verification!');
         
       })
       .catch(error => {
