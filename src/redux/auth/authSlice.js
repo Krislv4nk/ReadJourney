@@ -28,16 +28,16 @@ const authSlice = createSlice({
   extraReducers: builder =>
     builder
       .addCase(signupUser.fulfilled, (state, action) => {
-        state.token = action.payload.newUser.token;
+        state.token = action.payload.token;
         state.isLoading = false;
-        state.user = action.payload.newUser;
+        state.user = action.payload.User;
         state.isSignedIn = true;
       })
       .addCase(signinUser.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSignedIn = true;
         state.user = action.payload.user;
-        state.token = action.payload.user.token;
+        state.token = action.payload.token;
       })
       .addCase(refreshUser.fulfilled, (state, action) => {
         state.isLoading = false;
@@ -45,11 +45,8 @@ const authSlice = createSlice({
         state.user = action.payload.user;
         state.isRefreshing = false;
       })
-      .addCase(signoutUser.fulfilled, state => {
-        state.token = null;
-        state.user = initialState;
-        state.isSignedIn = false;
-        state.isLoading = false;
+      .addCase(signoutUser.fulfilled, () => {
+       return initialState;
       })
       .addCase(updateUserInfo.fulfilled, (state, action) => {
         state.user = action.payload.user;
@@ -57,12 +54,14 @@ const authSlice = createSlice({
       })
 
       .addCase(updateFavoritesBooksThunk.fulfilled, (state, { payload }) => {
-        state.user.FavoritesBooks = payload.FavoritesBooks;
+        state.user.favoriteBooks = payload.favoritesBooks;
       })
 
           .addCase(refreshUser.pending, (state, action) => {
-          state.user = action.payload.user;
-        state.isRefreshing = true;
+       state.isLoading = false;
+        state.isSignedIn = true;
+        state.user = action.payload.user;
+        state.isRefreshing = false;
       })
       
 

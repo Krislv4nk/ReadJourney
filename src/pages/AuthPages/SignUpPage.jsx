@@ -10,16 +10,17 @@ import { AuthForm } from "../../components/AuthForm/AuthForm";
 
 
 const SignUpPage = () => {
-  const isSignUp = true;
   const dispatch = useDispatch();
   
   const handleAuthSubmit = formData => {
     dispatch(signupUser(formData))
       .unwrap()
       .then(() => {
-        successToast('Registration Successful');
+  successToast('Registration successful!');
+        
       })
       .catch(error => {
+        console.log('Error:', error);
         errorToast(error);
       });
   };
@@ -27,7 +28,7 @@ const SignUpPage = () => {
     
       <Container>
       <AuthBackground />
-      <AuthForm isSignUp={isSignUp} onSubmit={handleAuthSubmit}/>
+      <AuthForm  onSubmit={handleAuthSubmit} isSignUp={true}/>
       </Container>
     
   );
