@@ -16,7 +16,7 @@ const VerifyEmailPage = () => {
 
   useEffect(() => {
     dispatch(verifyEmail(token)).then(() => {
-      successToast('You can sign in to your account!');
+      successToast('Email has been successfully verified! You can sign in to your account!');
       navigate('/signIn');
     }).catch(() => {
       navigate('/error');
