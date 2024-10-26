@@ -33,6 +33,7 @@
     padding: 14px; 
     height: 44px;
     background-color: var(--primary-color-main-gray);
+    color: var(--primary-color-white);
     margin-bottom: 8px;
     display: flex;
     flex-direction: row;
@@ -53,6 +54,13 @@ font-weight: 500;
     color: var(--primary-color-white);
 }
 
+.field:-webkit-autofill,
+.field:focus {
+  background-color: var(--primary-color-main-gray); 
+  color: var(--primary-color-white);
+  -webkit-box-shadow: 0 0 0px 1000px var(--primary-color-main-gray) inset; 
+  box-shadow: 0 0 0px 1000px var(--primary-color-main-gray) inset; 
+}
   .field::placeholder {
     font-weight: 500;
     font-size: 12px;
@@ -162,6 +170,7 @@ height: 44px;
 background-color: var(--primary-color-main-gray);
 margin-bottom: 14px;
 position: relative;
+color: var(--primary-color-white);
     }
 
 .field {
@@ -175,6 +184,14 @@ line-height: 133%;
 letter-spacing: -0.02em;
 text-align: flex-start;
   color: var(--primary-color-white);
+}
+
+.field:-webkit-autofill,
+.field:focus {
+  background-color: var(--primary-color-main-gray); 
+  color: var(--primary-color-white);
+  -webkit-box-shadow: 0 0 0px 1000px var(--primary-color-main-gray) inset; 
+  box-shadow: 0 0 0px 1000px var(--primary-color-main-gray) inset; 
 }
 
 .field::placeholder {

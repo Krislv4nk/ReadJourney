@@ -19,7 +19,7 @@ export const signupUser = createAsyncThunk(
   async (formData, thunkApi) => {
     try {
       const { data } = await axios.post('/users/signUp', formData);
-      setToken(data.token);
+      setToken(data.user.token);
       return data;
     } catch (error) {
       errorToast(error.response.data.message);
@@ -32,10 +32,7 @@ export const signinUser = createAsyncThunk(
   'auth/signinUser',
   async (formData, thunkApi) => {
     try {
-      const { data } = await axios.post('/users/signIn', {
-        email: formData.email, 
-        password: formData.password
-      });
+      const { data } = await axios.post('/users/signIn', formData);
       setToken(data.user.token);
       return data;
     } catch (error) {

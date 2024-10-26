@@ -5,7 +5,7 @@ import { Navigate } from 'react-router-dom';
 
 const PrivateRoute = ({ children, redirectTo = '/signIn' }) => {
   const isSignedIn = useSelector(selectAuthIsSignedIn);
-  return isSignedIn ? children : <Navigate to={redirectTo} />;
+  return isSignedIn ? children : <Navigate to={redirectTo} replace/>;
 };
 
 export default PrivateRoute;

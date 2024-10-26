@@ -39,8 +39,8 @@ function App() {
       <Route path="/users/verify/:token" element={<PublicRoute><VerifyEmailPage /></PublicRoute>} />
       <Route path="/forgot-password/:token" element={<PublicRoute><RecoverPasswordPage /></PublicRoute>} />
       <Route path="/" element={<PrivateRoute><SharedLayout /></PrivateRoute>}>
-        <Route index element={<HomePage />} />
-        <Route path="library" element={<LibraryPage />} />
+        <Route index element={<PrivateRoute><HomePage /></PrivateRoute>} />
+        <Route path="library" element={<PrivateRoute><LibraryPage /></PrivateRoute>} />
       </Route>
       <Route path="*" element={<ErrorPage />} />
     </Routes>

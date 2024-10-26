@@ -11,7 +11,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
   const [lookPassword, setLookPassword] = useState(false);
 
   const initialValues = {
-    username: isSignUp ? '' : '', 
+    username: '', 
     email: '',
     password: '',
   };
@@ -20,7 +20,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
   Yup.object().shape({
     username: isSignUp
       ? Yup.string().required('Name is required')
-      : Yup.string().notRequired(),
+      : Yup.string().nullable(),
     email: Yup.string().email('Invalid email address').required('Email is required'),
     password: !isForgotPassword || isRecoverPassword
       ? Yup.string()
@@ -37,7 +37,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
     setSubmitting(false);
     if (isSignUp || isRecoverPassword) {
       navigate('/signIn'); 
-    } else {
+    } else  {
       navigate('/'); 
     }
   } catch (error) {

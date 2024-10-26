@@ -10,7 +10,6 @@ import { AuthForm } from "../../components/AuthForm/AuthForm";
 
 
 const ForgotPasswordPage = () => {
-  const isForgotPassword = true;
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleAuthSubmit = formData => {
@@ -27,7 +26,7 @@ const ForgotPasswordPage = () => {
   return (
     <Container>
       <AuthBackground />
-      <AuthForm isForgotPassword={isForgotPassword} onSubmit={handleAuthSubmit}/>
+      <AuthForm isForgotPassword={true} onSubmit={handleAuthSubmit}/>
       </Container>
   );
 };
