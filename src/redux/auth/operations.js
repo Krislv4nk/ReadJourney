@@ -36,11 +36,9 @@ export const signinUser = createAsyncThunk(
         email: formData.email, 
         password: formData.password
       });
-      console.log('Response data:', data);
       setToken(data.user.token);
       return data;
     } catch (error) {
-      console.log(error.response)
       errorToast(error.response.data.message);
       return thunkApi.rejectWithValue(error.message);
     }

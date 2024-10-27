@@ -5,7 +5,7 @@ import { Navigate } from 'react-router-dom';
 
 const PublicRoute = ({ children, redirectTo = '/' }) => {
   const isSignedIn = useSelector(selectAuthIsSignedIn); 
-  return isSignedIn ? <Navigate to={redirectTo} replace/> : children;
+  return isSignedIn ? <Navigate to={redirectTo} /> : children;
 };
 
 export default PublicRoute;

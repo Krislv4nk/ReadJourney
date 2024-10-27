@@ -38,9 +38,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
     setSubmitting(false);
     if (isSignUp || isRecoverPassword) {
       navigate('/signIn'); 
-    } else  {
-      navigate('/'); 
-    }
+    } 
   } catch (error) {
     console.error('Error:', error);
     setSubmitting(false);
