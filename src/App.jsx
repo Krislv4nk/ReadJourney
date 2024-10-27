@@ -17,7 +17,7 @@ import ErrorPage from 'pages/ErrorPage/ErrorPage';
 
 import PrivateRoute from 'components/PrivateRoute/PrivateRoute';
 import PublicRoute from './components/PublicRoute/PublicRoute';
-import CircularProgressWithLabel from './components/CircularProgressWithLabel/CircularProgressWithLabel'
+import CircularProgressWithLabel from './components/CircularProgressWithLabel/CircularProgressWithLabel';
 
 function App() {
   const dispatch = useDispatch();
@@ -44,7 +44,7 @@ function App() {
         <Route index element={<PrivateRoute><HomePage /></PrivateRoute>} />
         <Route path="library" element={<PrivateRoute><LibraryPage /></PrivateRoute>} />
       </Route>
-      
+
       <Route path="*" element={<ErrorPage />} />
     </Routes>
   );

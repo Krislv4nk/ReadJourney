@@ -20,14 +20,14 @@ const SignInPage = () => {
   
   useEffect(() => {
     if (isAuthenticated) {
+       console.log('isAuthenticated:', isAuthenticated);
       navigate('/');
     }
   }, [isAuthenticated, navigate]);
 
-  const handleAuthSubmit = formData => {
+  const handleAuthSubmit =  (formData) => {
      try {
-      console.log('You are Sign In!');
-    dispatch(signinUser(formData));
+     dispatch(signinUser(formData));
     } catch (error) {
       console.error('Login failed:', error);
       
