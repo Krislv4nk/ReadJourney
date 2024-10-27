@@ -32,6 +32,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
 
 
   const handleAuthSubmit = async (values, { setSubmitting }) => {
+  
   try {
     await onSubmit(values);
     setSubmitting(false);

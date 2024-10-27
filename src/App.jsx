@@ -33,15 +33,28 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/signUp" element={<PublicRoute><SignUpPage /></PublicRoute>} />
-      <Route path="/signIn" element={<PublicRoute><SignInPage /></PublicRoute>} />
-      <Route path="/forgot-password" element={<PublicRoute><ForgotPasswordPage /></PublicRoute>} />
-      <Route path="/users/verify/:token" element={<PublicRoute><VerifyEmailPage /></PublicRoute>} />
-      <Route path="/forgot-password/:token" element={<PublicRoute><RecoverPasswordPage /></PublicRoute>} />
-      <Route path="/" element={<PrivateRoute><SharedLayout /></PrivateRoute>}>
+      <Route path="/" element={<SharedLayout />}>
+         
         <Route index element={<PrivateRoute><HomePage /></PrivateRoute>} />
+
+        <Route path="signUp" element={<PublicRoute><SignUpPage /></PublicRoute>} />
+      <Route path="signIn" element={<PublicRoute><SignInPage /></PublicRoute>} />
+      <Route path="forgot-password" element={<PublicRoute><ForgotPasswordPage /></PublicRoute>} />
+      <Route path="users/verify/:token" element={<PublicRoute><VerifyEmailPage /></PublicRoute>} />
+        <Route path="forgot-password/:token" element={<PublicRoute><RecoverPasswordPage /></PublicRoute>} />
+        
         <Route path="library" element={<PrivateRoute><LibraryPage /></PrivateRoute>} />
       </Route>
+
+      {/* <Route path="/" element={<SharedLayout />}>
+        <Route index element={<HomePage />} />
+        <Route path="/signUp" element={<SignUpPage />} />
+      <Route path="/signIn" element={<SignInPage />} />
+      <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+      <Route path="/users/verify/:token" element={<VerifyEmailPage />} />
+        <Route path="/forgot-password/:token" element={<RecoverPasswordPage />} />
+        <Route path="library" element={<LibraryPage />} />
+      </Route> */}
       <Route path="*" element={<ErrorPage />} />
     </Routes>
   );

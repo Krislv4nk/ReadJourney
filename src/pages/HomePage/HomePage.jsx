@@ -1,13 +1,16 @@
 
+import Container from "../../components/Container/Container";
+
+
 
 const HomePage = () => {
   return (
-    <div>
-      <div>
+   
+      <Container>
         <h2>Home Page</h2>
        
-      </div>
-    </div>
+      </Container>
+    
   );
 };
 

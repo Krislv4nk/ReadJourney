@@ -32,10 +32,15 @@ export const signinUser = createAsyncThunk(
   'auth/signinUser',
   async (formData, thunkApi) => {
     try {
-      const { data } = await axios.post('/users/signIn', formData);
+      const { data } = await axios.post('/users/signIn', {
+        email: formData.email, 
+        password: formData.password
+      });
+      console.log('Response data:', data);
       setToken(data.user.token);
       return data;
     } catch (error) {
+      console.log(error.response)
       errorToast(error.response.data.message);
       return thunkApi.rejectWithValue(error.message);
     }

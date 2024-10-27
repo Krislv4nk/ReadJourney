@@ -9,7 +9,8 @@ import { AuthForm } from "../../components/AuthForm/AuthForm";
 const SignInPage = () => {
 
   const dispatch = useDispatch();
-   const handleAuthSubmit = formData => {
+  const handleAuthSubmit = formData => {
+     console.log('You are Sign In!');
     dispatch(signinUser(formData));
   };
 

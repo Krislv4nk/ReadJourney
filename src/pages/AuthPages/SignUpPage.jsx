@@ -20,7 +20,6 @@ const SignUpPage = () => {
         
       })
       .catch(error => {
-        console.log('Error:', error);
         errorToast(error);
       });
   };
