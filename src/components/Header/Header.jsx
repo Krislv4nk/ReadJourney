@@ -4,10 +4,10 @@ export const Header = () => {
   return (
     <div>
       <nav>
-        <NavLink to="/home" end>
+        <NavLink to="home" end>
           Home
         </NavLink>
-        <NavLink to="/library">
+        <NavLink to="library">
           Library
         </NavLink>
         {/* <NavLink to="signUp" aria-label="Sign Up">

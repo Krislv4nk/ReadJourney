@@ -9,9 +9,12 @@ export const AuthBackground = () => {
         <div className={css.wrapper}>
             <div className={css.formWrapper}>
                 <div className={css.logoWrapper}>
+                    <div className={css.logoContainer}>
                 <svg className={css.logo}>
           <use xlinkHref={`${sprite}#icon-logo`}></use>
-                    </svg>
+                        </svg>
+                        <h3 className={css.logoHeader}>read journey</h3>
+</div>
                     <LanguageSwitcher/>
                     </div>
                 <h2 className={css.title}>Expand your mind, reading <span className={css.titleSpan}>a book</span></h2>

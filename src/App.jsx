@@ -1,3 +1,8 @@
+// bug with redirection
+
+
+
+
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
@@ -15,7 +20,7 @@ import LibraryPage from 'pages/LibraryPage/LibraryPage';
 import VerifyEmailPage from 'pages/AuthPages/VerifyEmailPage';
 import ErrorPage from 'pages/ErrorPage/ErrorPage';
 
-import PrivateRoute from 'components/PrivateRoute/PrivateRoute';
+// import PrivateRoute from 'components/PrivateRoute/PrivateRoute';
 import PublicRoute from './components/PublicRoute/PublicRoute';
 import CircularProgressWithLabel from './components/CircularProgressWithLabel/CircularProgressWithLabel';
 
@@ -34,16 +39,19 @@ function App() {
   return (
     <Routes>
 
-      <Route path="/" element={<SharedLayout />}>
-        
-<Route index element={<PublicRoute><SignUpPage /></PublicRoute>} />
+      <Route index  element={<PublicRoute><SignUpPage /></PublicRoute>} />
       <Route path="/signIn" element={<PublicRoute><SignInPage /></PublicRoute>} />
       <Route path="/forgot-password" element={<PublicRoute><ForgotPasswordPage /></PublicRoute>} />
       <Route path="/users/verify/:token" element={<PublicRoute><VerifyEmailPage /></PublicRoute>} />
         <Route path="/forgot-password/:token" element={<PublicRoute><RecoverPasswordPage /></PublicRoute>} />
 
-        <Route path='/home' element={<PrivateRoute><HomePage /></PrivateRoute>} />
-        <Route path="/library" element={<PrivateRoute><LibraryPage /></PrivateRoute>} />
+      <Route path="/" element={<SharedLayout />}>
+        
+          <Route path='home' element={<HomePage />} />
+       <Route path="library" element={<LibraryPage />} />
+
+        {/* <Route path='/home' element={<PrivateRoute><HomePage /></PrivateRoute>} />
+        <Route path="/library" element={<PrivateRoute><LibraryPage /></PrivateRoute>} /> */}
       </Route>
 
 
