@@ -181,7 +181,6 @@ font-weight: 700;
 font-size: 64px;
 line-height: 94%;
 letter-spacing: 0.02em;
-color: #f9f9f9;
 color: var(--primary-color-white);
 margin-top: 157px;
 height: 180px;
@@ -205,5 +204,35 @@ letter-spacing: 0.02em;
    
 }
   @media screen and (min-width: 1440px) {
-   
+
+   .wrapper{
+display: flex;
+flex-direction: row;
+gap: 16px;
+    }
+
+
+ .formWrapper {
+width: 600px;
+height: 736px;
+ }
+
+.title {
+margin-top: 107px;
+}
+
+
+
+ .iphoneWrapper {
+  display: flex;
+width: 600px;
+height: 736px;
+justify-content: center;
+align-items: flex-end;
+  }
+  
+  .iphone {
+    width: 405px;
+height: 647px;
+  }
 }
