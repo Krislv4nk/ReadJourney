@@ -101,7 +101,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
 
             <div className={css.linksContainer}>
               {!isSignUp && !isForgotPassword && !isRecoverPassword && (
-                <Link to="/signUp" className={css.link}>
+                <Link to="/" className={css.link}>
                   Do not have an account?<br/>
                 </Link>
               )}

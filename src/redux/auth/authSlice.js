@@ -94,6 +94,7 @@ const authSlice = createSlice({
           state.isLoading = false;
           state.error = payload;
           state.isRefreshing = false;
+          state.isSignedIn = false;
         }
       ),
 });
