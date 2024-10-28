@@ -16,34 +16,48 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
     password: '',
   };
 
-  const getValidationSchema = (isSignUp, isForgotPassword, isRecoverPassword) => 
-  Yup.object().shape({
-    username: isSignUp
-      ? Yup.string().required('Name is required')
-      : Yup.string().nullable(),
+  
+  const validationSchemaSignUp = Yup.object().shape({
+    username: Yup.string().required('Name is required'),
     email: Yup.string().email('Invalid email address').required('Email is required'),
-    password: !isForgotPassword || isRecoverPassword
-      ? Yup.string()
-          .required('Password is required')
-          .min(8, 'Password must be at least 8 characters')
-      : Yup.string().notRequired(),
+    password: Yup.string()
+      .required('Password is required')
+      .min(8, 'Password must be at least 8 characters'),
   });
 
+  const validationSchemaForgotPassword = Yup.object().shape({
+    email: Yup.string().email('Invalid email address').required('Email is required'),
+  });
 
+  const validationSchemaRecoverPassword = Yup.object().shape({
+    email: Yup.string().email('Invalid email address').required('Email is required'),
+    password: Yup.string()
+      .required('Password is required')
+      .min(8, 'Password must be at least 8 characters'),
+  });
 
-  const handleAuthSubmit = async (values, { setSubmitting }) => {
-  
-  try {
-    await onSubmit(values);
-    setSubmitting(false);
-    if (isSignUp || isRecoverPassword) {
-      navigate('/signIn'); 
-    } 
-  } catch (error) {
-    console.error('Error:', error);
-    setSubmitting(false);
-  }
-};
+  const getValidationSchema = () => {
+    if (isSignUp) return validationSchemaSignUp;
+    if (isForgotPassword) return validationSchemaForgotPassword;
+    if (isRecoverPassword) return validationSchemaRecoverPassword;
+    return Yup.object().shape({}); 
+  };
+
+   const handleAuthSubmit = async (values, { setSubmitting }) => {
+    try {
+      
+      const { username, email, password } = values;
+      const payload = isSignUp ? { username, email, password } : { email, password };
+      await onSubmit(payload);
+      setSubmitting(false);
+      if (isSignUp || isRecoverPassword) {
+        navigate('/signIn'); 
+      } 
+    } catch (error) {
+      console.error('Error:', error);
+      setSubmitting(false);
+    }
+  };
 
   const passwordVisible = () => {
     setLookPassword(prev => !prev);
@@ -53,46 +67,45 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
     <div className={css.wrapper}>
       <Formik
         initialValues={initialValues}
-  validationSchema={getValidationSchema(isSignUp, isForgotPassword, isRecoverPassword)} 
-  onSubmit={handleAuthSubmit}
+        validationSchema={getValidationSchema()} 
+        onSubmit={handleAuthSubmit}
       >
-        
-          <Form className={css.form}>
-            {isSignUp && (
+        <Form className={css.form}>
+          {isSignUp && (
             <div className={css.inputContainer}>
               <label className={css.label} htmlFor="username">Name:</label>
               <Field type="text" name="username" className={css.field} placeholder="YourName" autoComplete="name"/>
               <ErrorMessage name="username" component="div" className={css.error} />
-              </div>
-            )}
+            </div>
+          )}
           <div className={css.inputContainer}>
             <label className={css.label} htmlFor="email">Mail:</label>
-              <Field
-                type="email"
-                name="email"
-                className={css.field}
-                placeholder="Your@mail.com"
-                autoComplete="email"
+            <Field
+              type="email"
+              name="email"
+              className={css.field}
+              placeholder="Your@mail.com"
+              autoComplete="email"
             />
-              <ErrorMessage className={css.error} name="email" component="div" />
-            </div>
-            {(!isForgotPassword || isRecoverPassword) && (
+            <ErrorMessage className={css.error} name="email" component="div" />
+          </div>
+          {(!isForgotPassword || isRecoverPassword) && (
             <div className={css.inputContainer}>
               <label className={css.label} htmlFor="password">Password:</label>
-                <Field
-                  type={lookPassword ? 'text' : 'password'}
-                  placeholder="Yourpasswordhere"
-                  className={css.field}
-                  name="password"
-                  autoComplete="password"
-                />
-                <button type="button" className={css.passwordBtn} onClick={passwordVisible} title='Password visible'>
-                  <svg className={css.passwordIcon}>
-                    <use href={`${sprite}#icon-${lookPassword ? 'eye' : 'eye-off'}`} />
-                  </svg>
+              <Field
+                type={lookPassword ? 'text' : 'password'}
+                placeholder="Yourpasswordhere"
+                className={css.field}
+                name="password"
+                autoComplete="password"
+              />
+              <button type="button" className={css.passwordBtn} onClick={passwordVisible} title='Password visible'>
+                <svg className={css.passwordIcon}>
+                  <use href={`${sprite}#icon-${lookPassword ? 'eye' : 'eye-off'}`} />
+                </svg>
               </button>
-                <ErrorMessage className={css.error} name="password" component="div" />
-              </div>
+              <ErrorMessage className={css.error} name="password" component="div" />
+            </div>
           )}
           <div className={css.linkWrapper}>
             <button className={css.formBtn} type="submit">
@@ -116,9 +129,10 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
                 </Link>
               )}
             </div>
-            </div>
-          </Form>
+          </div>
+        </Form>
       </Formik>
     </div>
   );
 };
+
