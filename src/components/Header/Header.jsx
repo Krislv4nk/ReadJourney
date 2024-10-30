@@ -22,7 +22,7 @@ export const Header = () => {
       </nav>
 
       <div className={css.buttonWrapper}>
-        <button className={css.userButton} type='button'><span></span><span>User Name</span></button>
+        <button className={css.userButton} type='button'><span className={css.avatarBorder}>U</span><span className={css.userName}>User Name</span></button>
         <button className={css.logOutBtn} type='button'>Log out</button>
       </div>
     </div>

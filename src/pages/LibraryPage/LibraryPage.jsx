@@ -1,12 +1,14 @@
 
+import Container from "../../components/Container/Container";
+
+
 const LibraryPage = () => {
   return (
-    <div>
-      <div>
+    <Container>
         <h2>Library Page</h2>
        
-      </div>
-    </div>
+     
+    </Container>
   );
 };
 
