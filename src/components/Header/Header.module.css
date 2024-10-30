@@ -64,10 +64,13 @@ position: relative;
   transform-origin: left;
 }
 
-.link:hover, link:focus {
+.link:hover, .link:focus {
     color: var(--primary-color-white);
 }
 
+.link.active {
+    color: var(--primary-color-white);
+}
 .link.active::after, .link:hover::after {
   transform: scaleX(1);
 }
