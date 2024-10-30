@@ -1,0 +1,17 @@
+
+@media screen and (min-width: 768px) {
+
+}
+
+
+@media screen and (min-width: 1440px) {
+    .wrapper {
+        border-radius: 15px;
+width: 1216px;
+height: 74px;
+background-color: var(--primary-color-dark-gray);
+display: flex;
+justify-content: space-between;
+align-items: center;
+    }
+}
