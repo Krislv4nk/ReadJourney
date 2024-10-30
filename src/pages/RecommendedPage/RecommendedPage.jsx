@@ -3,7 +3,7 @@ import Container from "../../components/Container/Container";
 
 
 
-const HomePage = () => {
+const RecommendedPage = () => {
   return (
    
       <Container>
@@ -14,4 +14,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default RecommendedPage;

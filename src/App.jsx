@@ -15,7 +15,7 @@ import SignUpPage from 'pages/AuthPages/SignUpPage';
 import SignInPage from 'pages/AuthPages/SignInPage';
 import ForgotPasswordPage from 'pages/AuthPages/ForgotPasswordPage';
 import RecoverPasswordPage from 'pages/AuthPages/RecoverPasswordPage';
-import HomePage from 'pages/HomePage/HomePage';
+import RecommendedPage from 'pages/RecommendedPage/RecommendedPage';
 import LibraryPage from 'pages/LibraryPage/LibraryPage';
 import VerifyEmailPage from 'pages/AuthPages/VerifyEmailPage';
 import ErrorPage from 'pages/ErrorPage/ErrorPage';
@@ -47,10 +47,10 @@ function App() {
 
       <Route path="/" element={<SharedLayout />}>
         
-          <Route path='home' element={<HomePage />} />
+          <Route path='recommended' element={<RecommendedPage />} />
        <Route path="library" element={<LibraryPage />} />
 
-        {/* <Route path='/home' element={<PrivateRoute><HomePage /></PrivateRoute>} />
+        {/* <Route path='/recommended' element={<PrivateRoute><RecommendedPage /></PrivateRoute>} />
         <Route path="/library" element={<PrivateRoute><LibraryPage /></PrivateRoute>} /> */}
       </Route>
 
