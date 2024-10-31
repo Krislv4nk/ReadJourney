@@ -24,8 +24,8 @@ export const Header = () => {
       </nav>
 
       <div className={css.buttonWrapper}>
-        <div className={css.settingsWrapper}>
-        <button className={css.userSettings} type='button'>U</button>
+        <div className={css.userBarWrapper}>
+        <button className={css.userBarBtn} type='button'>U</button>
         <p className={css.userName}>User Name</p></div>
         <button className={css.logOutBtn} type='button'>Log out</button>
       </div>

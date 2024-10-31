@@ -82,7 +82,7 @@ position: relative;
     gap: 16px;
 }
 
-.userSettings {
+.userBarBtn {
     border: 3px solid rgba(249, 249, 249, 0.2);
 border-radius: 50%;
     background-color: transparent;
@@ -117,79 +117,20 @@ color: var(--primary-color-white);
 
 @media screen and (min-width: 1440px) {
     .wrapper {
-        border-radius: 15px;
 width: 1216px;
-height: 74px;
-background-color: var(--primary-color-dark-gray);
-display: flex;
-padding: 16px;
     }
-
-    .logoContainer {
-      display: flex;
-      flex-direction: row;
-      gap: 4px;
-    }
-
-
-.logoHeader {
-  display: block;
-font-weight: 700;
-font-size: 18px;
-line-height: 100%;
-letter-spacing: 0.02em;
-text-transform: uppercase;
-}
-
-.logo {
-width: 42px;
-height: 17px;
-
-    }  
+ 
 
 .navWrapper {
-    display: flex;
     gap: 40px;
     margin-left: 115px;
 }
 
-.link {
-font-weight: 500;
-font-size: 16px;
-line-height: 112%;
-letter-spacing: -0.02em;
-color: var(--primary-color-form-gray);
-position: relative;
-}
-.link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -10px; 
-  width: 100%;
-  height: 2px; 
-  background-color: var(--primary-color-white);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-  transform-origin: left;
-}
-
-.link:hover, .link:focus {
-    color: var(--primary-color-white);
-}
-
-.link.active {
-    color: var(--primary-color-white);
-}
-.link.active::after, .link:hover::after {
-  transform: scaleX(1);
-}
 .buttonWrapper {
-    display: flex;
     flex-direction: row;
     gap: 8px;
 }
-.settingsWrapper {
+.userBarWrapper {
     margin-right: 8px;
     display: flex;
     justify-content: center;
@@ -197,20 +138,7 @@ position: relative;
     gap: 8px;
 }
 
-.userSettings {
-    border: 3px solid rgba(249, 249, 249, 0.2);
-border-radius: 50%;
-    background-color: transparent;
-height: 40px;
-width: 40px;
-outline: none;
-display: flex;
-gap: 8px;
-background-color: transparent;
-color: var(--primary-color-white);
-justify-content: center;
-align-items: center;
-}
+
 .userName {
     color: var(--primary-color-white);
     display: block;
@@ -218,18 +146,4 @@ align-items: center;
    margin-right: 8px;
 }
 
-
-.logOutBtn {
-    border: 1px solid rgba(249, 249, 249, 0.2);
-border-radius: 30px;
-padding: 12px;
-width: 114px;
-height: 42px;
-font-weight: 700;
-font-size: 16px;
-line-height: 112%;
-letter-spacing: 0.02em;
-background-color: transparent;
-color: var(--primary-color-white);
-}
 }
