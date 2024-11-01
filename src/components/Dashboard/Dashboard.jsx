@@ -2,7 +2,7 @@
 
 import {Filters} from './Recommended/Filters/Filters';
 import {AddBook} from './MyLibrary/AddBook/AddBook';
-import {QuoteBlock} from './Recommended/QuoteBlock/QuoteBlock';
+import { QuoteBlock } from './Recommended/QuoteBlock/QuoteBlock';
 import {FunctionalDescription} from './Recommended/FunctionalDescription/FunctionalDescription';
 import {RecommendedBooks} from './MyLibrary/RecommendedBooks/RecommendedBooks';
 
