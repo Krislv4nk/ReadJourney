@@ -51,7 +51,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
       await onSubmit(payload);
       setSubmitting(false);
       if (isSignUp || isRecoverPassword) {
-        navigate('/signIn'); 
+        navigate('/signin'); 
       } 
     } catch (error) {
       console.error('Error:', error);
@@ -114,7 +114,7 @@ export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPasswo
 
             <div className={css.linksContainer}>
               {!isSignUp && !isForgotPassword && !isRecoverPassword && (
-                <Link to="/" className={css.link}>
+                <Link to="/signUp" className={css.link}>
                   Do not have an account?<br/>
                 </Link>
               )}

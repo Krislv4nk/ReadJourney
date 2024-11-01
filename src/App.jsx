@@ -11,6 +11,7 @@ import { selectAuthIsRefreshing } from './redux/auth/selectors';
 import  '../src/helpers/i18n';
 
 import SharedLayout from 'components/SharedLayout/SharedLayout';
+import WelcomePage from 'pages/WelcomePage/WelcomePage';
 import SignUpPage from 'pages/AuthPages/SignUpPage';
 import SignInPage from 'pages/AuthPages/SignInPage';
 import ForgotPasswordPage from 'pages/AuthPages/ForgotPasswordPage';
@@ -20,7 +21,7 @@ import LibraryPage from 'pages/LibraryPage/LibraryPage';
 import VerifyEmailPage from 'pages/AuthPages/VerifyEmailPage';
 import ErrorPage from 'pages/ErrorPage/ErrorPage';
 
-// import PrivateRoute from 'components//Routes/PrivateRoute/PrivateRoute';
+import PrivateRoute from 'components//Routes/PrivateRoute/PrivateRoute';
 import PublicRoute from './components/Routes/PublicRoute/PublicRoute';
 import CircularProgressWithLabel from './components/SharedLayout/CircularProgressWithLabel/CircularProgressWithLabel';
 
@@ -38,24 +39,19 @@ function App() {
 
   return (
     <Routes>
-
-      <Route index  element={<PublicRoute><SignUpPage /></PublicRoute>} />
+<Route index element={<WelcomePage />} />
+<Route path="/signUp"  element={<PublicRoute><SignUpPage /></PublicRoute>} />
       <Route path="/signIn" element={<PublicRoute><SignInPage /></PublicRoute>} />
       <Route path="/forgot-password" element={<PublicRoute><ForgotPasswordPage /></PublicRoute>} />
       <Route path="/users/verify/:token" element={<PublicRoute><VerifyEmailPage /></PublicRoute>} />
         <Route path="/forgot-password/:token" element={<PublicRoute><RecoverPasswordPage /></PublicRoute>} />
 
-      <Route path="/" element={<SharedLayout />}>
-        
-          <Route path='recommended' element={<RecommendedPage />} />
-       <Route path="library" element={<LibraryPage />} />
+<Route path="/" element={<SharedLayout />}>
+<Route path='/recommended' element={<PrivateRoute><RecommendedPage /></PrivateRoute>} />
+        <Route path="/library" element={<PrivateRoute><LibraryPage /></PrivateRoute>} />
+        </Route>
 
-        {/* <Route path='/recommended' element={<PrivateRoute><RecommendedPage /></PrivateRoute>} />
-        <Route path="/library" element={<PrivateRoute><LibraryPage /></PrivateRoute>} /> */}
-      </Route>
-
-
-      <Route path="*" element={<ErrorPage />} />
+      <Route path="*" element={<ErrorPage />} /> 
     </Routes>
   );
 }

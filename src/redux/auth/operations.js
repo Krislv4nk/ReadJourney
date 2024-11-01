@@ -28,6 +28,19 @@ export const signupUser = createAsyncThunk(
   }
 );
 
+export const verifyUser = createAsyncThunk(
+  'auth/verifyUser',
+  async (verificationToken, thunkApi) => {  
+    try {
+      const { data } = await axios.get(`/users/verify/${verificationToken}`);
+      return data;
+    } catch (error) {
+      errorToast(error.response.data.message);
+      return thunkApi.rejectWithValue(error.message); 
+    }
+  }
+);
+
 export const signinUser = createAsyncThunk(
   'auth/signinUser',
   async (formData, thunkApi) => {
@@ -41,6 +54,8 @@ export const signinUser = createAsyncThunk(
     }
   }
 )
+
+
 
 export const signoutUser = createAsyncThunk(
   'auth/signoutUser',

@@ -31,7 +31,6 @@ padding: 16px;
 font-weight: 700;
 font-size: 18px;
 line-height: 100%;
-letter-spacing: 0.02em;
 text-transform: uppercase;
 }
 
@@ -50,7 +49,6 @@ height: 17px;
 font-weight: 500;
 font-size: 16px;
 line-height: 112%;
-letter-spacing: -0.02em;
 color: var(--primary-color-form-gray);
 position: relative;
 }
@@ -91,7 +89,6 @@ width: 40px;
 outline: none;
 display: flex;
 gap: 8px;
-background-color: transparent;
 color: var(--primary-color-white);
 justify-content: center;
 align-items: center;
@@ -107,8 +104,9 @@ border-radius: 30px;
 padding: 12px 28px;
 width: auto;
 height: 42px;
-font-weight: 600;
+font-weight: 700;
 font-size: 16px;
+line-height: 112%;
 background-color: transparent;
 color: var(--primary-color-white);
 }

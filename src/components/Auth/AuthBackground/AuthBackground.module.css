@@ -39,7 +39,6 @@
     font-weight: 700;
     font-size: 24px; 
     line-height: 100%;
-    letter-spacing: 0.02em;
     color: var(--primary-color-white);
     margin-top: 20px; 
     height: auto;
@@ -52,7 +51,6 @@
     font-weight: 700;
     font-size: 24px; 
     line-height: 100%;
-    letter-spacing: 0.02em;
   }
 
   .iphoneWrapper {
@@ -113,11 +111,9 @@ background-color: var(--primary-color-dark-gray);
  }
 
 .title {
-    
 font-weight: 700;
 font-size: 31px;
 line-height: 100%;
-letter-spacing: 0.02em;
 color: var(--primary-color-white);
 margin-top: 20px;
 height: 64px;
@@ -127,11 +123,9 @@ height: 64px;
 
 .titleSpan {
     color: var(--primary-color-text);
-    
 font-weight: 700;
 font-size: 31px;
 line-height: 100%;
-letter-spacing: 0.02em;
 }
 
  .iphoneWrapper {
@@ -152,21 +146,17 @@ height: 351px;
 
   @media screen and (min-width: 768px) {
 
-    
-
     .logoContainer {
       display: flex;
       flex-direction: row;
       gap: 4px;
     }
 
-
 .logoHeader {
   display: block;
 font-weight: 700;
 font-size: 18px;
 line-height: 100%;
-letter-spacing: 0.02em;
 text-transform: uppercase;
 }
 
@@ -180,7 +170,6 @@ padding: 40px 64px;
 font-weight: 700;
 font-size: 64px;
 line-height: 94%;
-letter-spacing: 0.02em;
 color: var(--primary-color-white);
 margin-top: 157px;
 height: 180px;
@@ -193,15 +182,12 @@ height: 180px;
 font-weight: 700;
 font-size: 64px;
 line-height: 94%;
-letter-spacing: 0.02em;
 }
 
  .iphoneWrapper {
  display: none;
   }
   
-  
-   
 }
   @media screen and (min-width: 1440px) {
 
@@ -211,7 +197,6 @@ flex-direction: row;
 gap: 16px;
     }
 
-
  .formWrapper {
 width: 600px;
 height: 736px;
@@ -220,8 +205,6 @@ height: 736px;
 .title {
 margin-top: 107px;
 }
-
-
 
  .iphoneWrapper {
   display: flex;

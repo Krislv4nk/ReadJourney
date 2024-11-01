@@ -2,6 +2,7 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 import {
   signupUser,
+  verifyUser,
   signinUser,
   signoutUser,
   refreshUser,
@@ -19,6 +20,7 @@ const initialState = {
   isRefreshing: false,
   isLoading: false,
   isSignedIn: false,
+  isVerified: false,
   error: null,
 };
 
@@ -31,13 +33,19 @@ const authSlice = createSlice({
         state.token = action.payload.user.token;
         state.isLoading = false;
         state.user = action.payload.user;
-        state.isSignedIn = true;
+        state.isVerified = false;
+      })
+      .addCase(verifyUser.fulfilled, (state, action) => {
+        state.isVerified = true; 
+        state.isSignedIn = true; 
+        state.user = action.payload.user; 
       })
       .addCase(signinUser.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSignedIn = true;
         state.user = action.payload.user;
         state.token = action.payload.user.token;
+        state.isVerified = true;
       })
       .addCase(refreshUser.fulfilled, (state, action) => {
         state.isLoading = false;
@@ -70,7 +78,7 @@ const authSlice = createSlice({
           signupUser.pending,
           signinUser.pending,
           signoutUser.pending,
-        
+          verifyUser.pending,
           updateUserInfo.pending,
           updateFavoritesBooksThunk.pending
           // updateUserInfoThunk.pending
@@ -83,6 +91,7 @@ const authSlice = createSlice({
       .addMatcher(
         isAnyOf(
           signupUser.rejected,
+          verifyUser.rejected,
           signinUser.rejected,
           refreshUser.rejected,
           signoutUser.rejected,

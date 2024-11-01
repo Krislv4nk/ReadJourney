@@ -12,11 +12,11 @@ export const Header = () => {
                         <h3 className={css.logoHeader}>read journey</h3>
 </div>
       <nav className={css.navWrapper}>
-        <NavLink to="recommended" className={({ isActive }) =>
+        <NavLink to="/recommended" className={({ isActive }) =>
               `${css.link} ${isActive ? css.active : ''}`}>
           Home
         </NavLink>
-        <NavLink to="library" className={({ isActive }) =>
+        <NavLink to="/library" className={({ isActive }) =>
               `${css.link} ${isActive ? css.active : ''}`}>
         My Library
         </NavLink>

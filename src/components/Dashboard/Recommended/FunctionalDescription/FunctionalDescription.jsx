@@ -9,7 +9,7 @@ export const FunctionalDescription = ({ link }) => (
             <li>1</li>
             <li>2</li>
         </ul>
-    <Link to={link}>Go to My Library</Link>
+    <Link to={link}>My Library</Link>
   </div>
 );
 
