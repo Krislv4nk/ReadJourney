@@ -1,16 +1,20 @@
 
-import Container from "../../components/SharedLayout/Container/Container";
+
 import Dashboard from "../../components/Dashboard/Dashboard";
+import { RecommendedBooks } from "../../components/RecommendedBooks/RecommendedBooks";
+import css from './RecommendedPage.module.css';
 
 
 
 const RecommendedPage = () => {
   return (
    
-      <Container>
+      <div>
+      <div className={css.pageWrapper}>
         <Dashboard page="recommended" />
-       
-      </Container>
+        <RecommendedBooks />
+      </div>
+      </div>
     
   );
 };

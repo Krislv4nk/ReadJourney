@@ -20,7 +20,7 @@ export const QuoteBlock = () => {
     });
 
     return (
-        <blockquote className={css.blockquote}>
+        <div className={css.blockquote}>
             <img src={books} alt="iphone" className={css.books} />
             <div className={css.blockquoteWrapper}>
            <span className={css.quoteContent}>
@@ -31,7 +31,7 @@ export const QuoteBlock = () => {
                     <span className={css.quoteBook}>&quot;{randomQuote.book}&quot;</span>
                 </div>
                 </div>
-        </blockquote>
+        </div>
     );
 };
 

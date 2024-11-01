@@ -1,13 +1,13 @@
 
-import Container from "../../components/SharedLayout/Container/Container";
+
 import Dashboard from "../../components/Dashboard/Dashboard";
 
 
 const LibraryPage = () => {
   return (
-    <Container>
+    <div>
        <Dashboard page="library" />
-    </Container>
+    </div>
   );
 };
 

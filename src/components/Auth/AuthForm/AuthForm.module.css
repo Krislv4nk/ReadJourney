@@ -54,13 +54,7 @@ font-weight: 500;
     color: var(--primary-color-white);
 }
 
-.field:-webkit-autofill,
-.field:focus {
-  background-color: var(--primary-color-main-gray); 
-  color: var(--primary-color-white);
-  -webkit-box-shadow: 0 0 0px 1000px var(--primary-color-main-gray) inset; 
-  box-shadow: 0 0 0px 1000px var(--primary-color-main-gray) inset; 
-}
+
   .field::placeholder {
     font-weight: 500;
     font-size: 12px;
@@ -174,7 +168,7 @@ color: var(--primary-color-white);
     }
 
 .field {
-  background-color: var(--primary-color-main-gray);
+  background-color: transparent;
   margin-left: 10px;
   outline: none;
   border: none;
@@ -187,13 +181,7 @@ text-align: flex-start;
   color: var(--primary-color-white);
 }
 
-.field:-webkit-autofill,
-.field:focus {
-  background-color: var(--primary-color-main-gray); 
-  color: var(--primary-color-white);
-  -webkit-box-shadow: 0 0 0px 1000px var(--primary-color-main-gray) inset; 
-  box-shadow: 0 0 0px 1000px var(--primary-color-main-gray) inset; 
-}
+
 
 .field::placeholder {
 font-weight: 500;

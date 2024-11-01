@@ -13,11 +13,14 @@
  /* "SF Pro Text", sans-serif; */
 
 body {
-  background-color: #141414;
+  background-color: var(--primary-color-black);
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #f9f9f9;
+  color: var(--primary-color-white);
+  font-size: 14px;
+  line-height: 129%;
+letter-spacing: -0.02em;
   width: 100%;
   height: 100vh;
   margin: 0;
@@ -46,6 +49,20 @@ button {
   cursor: pointer;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; 
+    -webkit-text-fill-color: var(--primary-color-white) !important;
+    transition: background-color 5000s ease-in-out 0s; 
+}
+
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset; 
+    -webkit-text-fill-color: var(--primary-color-white); 
+}
 
 
  /* @media screen and (min-width: 320px) and (max-width: 374.99px) {
