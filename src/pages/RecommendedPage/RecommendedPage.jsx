@@ -1,5 +1,6 @@
 
 import Container from "../../components/Container/Container";
+import Dashboard from "../../components/Dashboard/Dashboard";
 
 
 
@@ -7,7 +8,7 @@ const RecommendedPage = () => {
   return (
    
       <Container>
-        <h2>Home Page</h2>
+        <Dashboard page="recommended" />
        
       </Container>
     

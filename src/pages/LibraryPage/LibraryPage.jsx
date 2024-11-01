@@ -1,13 +1,12 @@
 
 import Container from "../../components/Container/Container";
+import Dashboard from "../../components/Dashboard/Dashboard";
 
 
 const LibraryPage = () => {
   return (
     <Container>
-        <h2>Library Page</h2>
-       
-     
+       <Dashboard page="library" />
     </Container>
   );
 };
