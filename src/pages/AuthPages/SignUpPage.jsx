@@ -5,8 +5,8 @@ import { successToast, errorToast} from '../../helpers/services';
 
 
 import Container from "../../components/Container/Container";
-import { AuthBackground } from "../../components/AuthBackground/AuthBackground";
-import { AuthForm } from "../../components/AuthForm/AuthForm";
+import { AuthBackground } from "../../components/Auth/AuthBackground/AuthBackground";
+import { AuthForm } from "../../components/Auth/AuthForm/AuthForm";
 
 
 const SignUpPage = () => {

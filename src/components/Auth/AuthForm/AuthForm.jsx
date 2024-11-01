@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import sprite from './../../assets/icons/sprite.svg';
+import sprite from '../../../assets/icons/sprite.svg';
 import css from './AuthForm.module.css';
 
 export const AuthForm = ({ onSubmit, isSignUp, isForgotPassword, isRecoverPassword }) => {

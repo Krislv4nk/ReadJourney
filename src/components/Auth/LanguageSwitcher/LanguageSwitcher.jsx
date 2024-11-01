@@ -10,7 +10,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import Radio from '@mui/material/Radio';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { useTranslation } from 'react-i18next';
-import sprite from '../../assets/icons/sprite.svg';
+import sprite from '../../../assets/icons/sprite.svg';
 import css from './LanguageSwitcher.module.css';
 
 const languages = [
@@ -56,8 +56,8 @@ function LanguageDialog(props) {
       onEntering={handleEntering}
       sx={{
         '& .MuiDialog-paper': {
-          backgroundColor: 'var(--primary-color-dark-gray)', // Темний сірий колір фону
-          color: 'var(--primary-color-white)', // Білий колір тексту
+          backgroundColor: 'var(--primary-color-dark-gray)', 
+          color: 'var(--primary-color-white)', 
           width: '80%',
           maxHeight: 435,
         },
@@ -75,7 +75,7 @@ function LanguageDialog(props) {
           onChange={handleChange}
           sx={{
             '& .MuiFormControlLabel-label': {
-              color: 'var(--primary-color-white)', // Білий текст для радіо-кнопок
+              color: 'var(--primary-color-white)', 
             },
           }}
         >
@@ -84,9 +84,9 @@ function LanguageDialog(props) {
               value={language.code}
               key={language.code}
               control={<Radio sx={{
-                color: 'var(--primary-color-text)', // Радіо-кнопка з прозорим текстом
+                color: 'var(--primary-color-text)', 
                 '&.Mui-checked': {
-                  color: 'var(--primary-color-white)', // Білий колір при виборі
+                  color: 'var(--primary-color-white)', 
                 },
               }} />}
               label={language.label}

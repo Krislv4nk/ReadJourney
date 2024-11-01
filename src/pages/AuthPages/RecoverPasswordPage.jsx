@@ -6,8 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 import Container from "../../components/Container/Container";
-import {AuthBackground} from "../../components/AuthBackground/AuthBackground";
-import { AuthForm } from "../../components/AuthForm/AuthForm";
+import {AuthBackground} from "../../components/Auth/AuthBackground/AuthBackground";
+import { AuthForm } from "../../components/Auth/AuthForm/AuthForm";
 
 const RecoverPasswordPage = () => {
   const isRecoverPassword = true

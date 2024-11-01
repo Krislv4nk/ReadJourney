@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { verifyEmail } from '../../redux/auth/operations'; 
 
 import Container from "../../components/Container/Container";
-import { AuthBackground } from "../../components/AuthBackground/AuthBackground";
+import { AuthBackground } from "../../components/Auth/AuthBackground/AuthBackground";
 import { successToast } from '../../helpers/services';
 import css from './Auth.module.css';
 
