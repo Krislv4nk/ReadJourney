@@ -50,7 +50,7 @@
 
 
 import { useEffect } from 'react';
-import { NavLink, useParams, useNavigate } from 'react-router-dom';
+import {useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'; 
 import { selectAuthVerified } from '../../redux/auth/selectors';
 import { verifyUser } from '../../redux/auth/operations'; 
@@ -62,20 +62,21 @@ import { successToast } from '../../helpers/services';
 import css from './Auth.module.css';
 
 const VerifyEmailPage = () => {
-  const { token } = useParams();
+  const { verificationToken } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const isVerified = useSelector(selectAuthVerified);
 
   useEffect(() => {
-    dispatch(verifyUser(token)).then(() => {
+    dispatch(verifyUser(verificationToken)).then(() => {
       successToast('Email has been successfully verified! You can sign in to your account!');
       
     }).catch(() => {
+      console.error("error")
       navigate('/error');
     });
-  }, [dispatch, token, navigate]);
+  }, [dispatch, verificationToken, navigate]);
 
   return (
     <Container>
@@ -83,7 +84,7 @@ const VerifyEmailPage = () => {
       {isVerified ? (
         <>
           <h3 className={css.verifyHeader}>Email has been successfully verified!</h3>
-          <NavLink to="/signIn" aria-label="Sign In">You can sign in to your account</NavLink>
+          
         </>
       ) : (
         <CircularProgressWithLabel />
@@ -98,37 +99,3 @@ export default VerifyEmailPage;
 
 
 
-// import { useEffect } from 'react';
-// import { useDispatch } from 'react-redux';
-// import { useParams, useNavigate } from 'react-router-dom';
-// import { verifyUser } from '../../redux/auth/operations'; // Додай операцію верифікації
-
-// const VerifyEmailPage = () => {
-//   const { token } = useParams();
-//   const dispatch = useDispatch();
-//   const navigate = useNavigate();
-
-//   useEffect(() => {
-//     const handleVerify = async () => {
-//       try {
-//         await dispatch(verifyUser(token)).unwrap(); // Виклик верифікації
-//         // Додай логіку, якщо верифікація успішна
-//         navigate('/signIn'); // Перенаправлення на сторінку входу
-//       } catch (error) {
-//         console.error('Verification failed:', error);
-//         // Можеш тут обробити помилку
-//       }
-//     };
-
-//     handleVerify();
-//   }, [dispatch, token, navigate]);
-
-//   return (
-//     <div>
-//       <h1>Verifying...</h1>
-//       <p>Please wait while we verify your email address.</p>
-//     </div>
-//   );
-// };
-
-// export default VerifyEmailPage;

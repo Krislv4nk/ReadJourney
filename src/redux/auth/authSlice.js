@@ -33,7 +33,8 @@ const authSlice = createSlice({
         state.token = action.payload.user.token;
         state.isLoading = false;
         state.user = action.payload.user;
-        state.isVerified = false;
+        state.isSignedIn = false,
+        state.isVerified = true;
       })
       .addCase(verifyUser.fulfilled, (state, action) => {
         state.isVerified = true; 

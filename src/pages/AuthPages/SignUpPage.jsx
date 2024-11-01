@@ -1,7 +1,8 @@
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { signupUser } from '../../redux/auth/operations';
+import {selectAuthVerified} from '../../redux/auth/selectors.js';
 import { successToast, errorToast} from '../../helpers/services';
 
 
@@ -13,16 +14,20 @@ import { AuthForm } from "../../components/Auth/AuthForm/AuthForm";
 const SignUpPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const isVerified = useSelector(selectAuthVerified);
   
   const handleAuthSubmit = formData => {
     dispatch(signupUser(formData))
       .unwrap()
       .then(() => {
-        navigate('/signIn');
-  successToast('Registration successful! Please, confirm email for verification!');
         
+  successToast('Registration successful! Please, confirm email for verification!');
+        if (isVerified) {
+          navigate('/signIn');
+        }
       })
       .catch(error => {
+        console.error(error);
         errorToast(error);
       });
   };
