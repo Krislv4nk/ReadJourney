@@ -1,5 +1,5 @@
 
-import Container from "../../components/Container/Container";
+import Container from "../../components/SharedLayout/Container/Container";
 import Dashboard from "../../components/Dashboard/Dashboard";
 
 

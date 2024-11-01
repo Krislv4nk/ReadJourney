@@ -5,7 +5,7 @@ import { recoverPassword } from '../../redux/auth/operations';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
-import Container from "../../components/Container/Container";
+import Container from "../../components/SharedLayout/Container/Container";
 import {AuthBackground} from "../../components/Auth/AuthBackground/AuthBackground";
 import { AuthForm } from "../../components/Auth/AuthForm/AuthForm";
 

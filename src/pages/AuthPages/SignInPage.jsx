@@ -2,7 +2,7 @@
 import { useDispatch } from 'react-redux';
 import { signinUser } from '../../redux/auth/operations';
 
-import Container from "../../components/Container/Container";
+import Container from "../../components/SharedLayout/Container/Container";
 import { AuthBackground } from "../../components/Auth/AuthBackground/AuthBackground";
 import { AuthForm } from "../../components/Auth/AuthForm/AuthForm";
 

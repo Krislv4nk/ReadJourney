@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import sprite from '../../assets/icons/sprite.svg';
+import sprite from '../../../assets/icons/sprite.svg';
 import css from './Header.module.css';
 
 export const Header = () => {
@@ -18,7 +18,7 @@ export const Header = () => {
         </NavLink>
         <NavLink to="library" className={({ isActive }) =>
               `${css.link} ${isActive ? css.active : ''}`}>
-          Library
+        My Library
         </NavLink>
         
       </nav>

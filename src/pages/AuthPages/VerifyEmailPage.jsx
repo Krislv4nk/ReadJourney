@@ -5,7 +5,7 @@ import { NavLink, useParams, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { verifyEmail } from '../../redux/auth/operations'; 
 
-import Container from "../../components/Container/Container";
+import Container from "../../components/SharedLayout/Container/Container";
 import { AuthBackground } from "../../components/Auth/AuthBackground/AuthBackground";
 import { successToast } from '../../helpers/services';
 import css from './Auth.module.css';

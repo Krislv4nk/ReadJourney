@@ -20,9 +20,9 @@ import LibraryPage from 'pages/LibraryPage/LibraryPage';
 import VerifyEmailPage from 'pages/AuthPages/VerifyEmailPage';
 import ErrorPage from 'pages/ErrorPage/ErrorPage';
 
-// import PrivateRoute from 'components/PrivateRoute/PrivateRoute';
-import PublicRoute from './components/PublicRoute/PublicRoute';
-import CircularProgressWithLabel from './components/CircularProgressWithLabel/CircularProgressWithLabel';
+// import PrivateRoute from 'components//Routes/PrivateRoute/PrivateRoute';
+import PublicRoute from './components/Routes/PublicRoute/PublicRoute';
+import CircularProgressWithLabel from './components/SharedLayout/CircularProgressWithLabel/CircularProgressWithLabel';
 
 function App() {
   const dispatch = useDispatch();

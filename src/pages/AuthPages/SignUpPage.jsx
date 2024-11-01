@@ -4,7 +4,7 @@ import { signupUser } from '../../redux/auth/operations';
 import { successToast, errorToast} from '../../helpers/services';
 
 
-import Container from "../../components/Container/Container";
+import Container from "../../components/SharedLayout/Container/Container";
 import { AuthBackground } from "../../components/Auth/AuthBackground/AuthBackground";
 import { AuthForm } from "../../components/Auth/AuthForm/AuthForm";
 
