@@ -35,8 +35,8 @@ export const verifyUser = createAsyncThunk(
       const { data } = await axios.get(`/users/verify/${verificationToken}`);
       return data;
     } catch (error) {
-      errorToast(error.response.data.message);
-      return thunkApi.rejectWithValue(error.message); 
+      console.error("Error in verifyUser:", error.response?.data);
+      return thunkApi.rejectWithValue(error.response?.data?.message || error.message); 
     }
   }
 );

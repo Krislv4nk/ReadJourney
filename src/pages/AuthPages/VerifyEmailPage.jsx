@@ -58,7 +58,7 @@ import { verifyUser } from '../../redux/auth/operations';
 import Container from "../../components/SharedLayout/Container/Container";
 import CircularProgressWithLabel from "../../components/SharedLayout/CircularProgressWithLabel/CircularProgressWithLabel";
 import { AuthBackground } from "../../components/Auth/AuthBackground/AuthBackground";
-import { successToast } from '../../helpers/services';
+import { successToast, errorToast } from '../../helpers/services';
 import css from './Auth.module.css';
 
 const VerifyEmailPage = () => {
@@ -69,14 +69,23 @@ const VerifyEmailPage = () => {
   const isVerified = useSelector(selectAuthVerified);
 
   useEffect(() => {
-    dispatch(verifyUser(verificationToken)).then(() => {
-      successToast('Email has been successfully verified! You can sign in to your account!');
-      
-    }).catch(() => {
-      console.error("error")
+    if (verificationToken) {
+      dispatch(verifyUser(verificationToken))
+        .then(() => {
+          successToast('Email has been successfully verified! You can sign in to your account!');
+          navigate('/signIn');
+        })
+        .catch((error) => {
+          console.error("Verification error:", error);
+          errorToast('User not found or token invalid.');
+          navigate('/error');
+        });
+    } else {
+      console.error("Verification token is undefined");
       navigate('/error');
-    });
+    }
   }, [dispatch, verificationToken, navigate]);
+
 
   return (
     <Container>
