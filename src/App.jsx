@@ -43,7 +43,7 @@ function App() {
 <Route path="/signUp"  element={<PublicRoute><SignUpPage /></PublicRoute>} />
       <Route path="/signIn" element={<PublicRoute><SignInPage /></PublicRoute>} />
       <Route path="/forgot-password" element={<PublicRoute><ForgotPasswordPage /></PublicRoute>} />
-      <Route path="/users/verify/:token" element={<PublicRoute><VerifyEmailPage /></PublicRoute>} />
+      <Route path="/users/verify/:verificationToken" element={<PublicRoute><VerifyEmailPage /></PublicRoute>} />
         <Route path="/forgot-password/:token" element={<PublicRoute><RecoverPasswordPage /></PublicRoute>} />
 
 <Route path="/" element={<SharedLayout />}>
