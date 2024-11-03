@@ -296,7 +296,7 @@ letter-spacing: 0.02em;
 }
 
 .linkWrapper {
- margin-top: 64px;
+ margin-top: 58px;
  justify-content: space-between;
 }
 
@@ -322,10 +322,5 @@ text-decoration-skip-ink: none;
     margin-left: 138px;
 }
 
-
-.linkWrapper {
- margin-top: 64px;
- justify-content: space-between;
-}
 
 }

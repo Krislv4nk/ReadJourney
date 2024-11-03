@@ -25,6 +25,8 @@ import PrivateRoute from 'components//Routes/PrivateRoute/PrivateRoute';
 import PublicRoute from './components/Routes/PublicRoute/PublicRoute';
 import CircularProgressWithLabel from './components/SharedLayout/CircularProgressWithLabel/CircularProgressWithLabel';
 
+// import.meta.env.VITE_BASE_URL;
+
 function App() {
   const dispatch = useDispatch();
   const isFetchingCurrentUser = useSelector(selectAuthIsRefreshing);
@@ -47,7 +49,8 @@ function App() {
         <Route path="/forgot-password/:token" element={<PublicRoute><RecoverPasswordPage /></PublicRoute>} />
 
 <Route path="/" element={<SharedLayout />}>
-<Route path='/recommended' element={<PrivateRoute><RecommendedPage /></PrivateRoute>} />
+<Route path='/recommended' element={<RecommendedPage />} />
+{/* <Route path='/recommended' element={<PrivateRoute><RecommendedPage /></PrivateRoute>} /> */}
         <Route path="/library" element={<PrivateRoute><LibraryPage /></PrivateRoute>} />
         </Route>
 
@@ -59,6 +62,5 @@ function App() {
 export default App;
 
 
-//  <Route path='home' element={<HomePage />} />
-//        <Route path="library" element={<LibraryPage />} />
+
 // kris.lv4nk00@gmail.com

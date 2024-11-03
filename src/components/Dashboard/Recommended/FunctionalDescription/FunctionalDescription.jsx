@@ -1,15 +1,26 @@
 
 
 import { Link } from 'react-router-dom';
+import sprite from '../../../../assets/icons/sprite.svg';
+import css from '../../Dashboard.module.css';
+
+
 
 export const FunctionalDescription = ({ link }) => (
-  <div>
-        <h4>Start your workout</h4>
-        <ul>
-            <li>1</li>
-            <li>2</li>
+  <div className={css.funWrapper}>
+        <h4 className={css.funTitle}>Start your workout</h4>
+        <ul className={css.funList}>
+            <li className={css.funItem}><span className={css.funPosition}>1</span>
+            <p className={css.funDescription}>
+              <span className={css.funDescriptionAccent}>Create a personal library:</span> add the books you intend to read 
+           <br/> to it.</p></li>
+            <li className={css.funItem}><span className={css.funPosition}>2</span>
+            <p className={css.funDescription}>
+              <span className={css.funDescriptionAccent}>Create your first workout:</span> define a goal, choose a period, start training.</p></li>
         </ul>
-    <Link to={link}>My Library</Link>
+    <Link className={css.funLink} to={link}>My Library<svg className={css.funSvg}>
+          <use xlinkHref={`${sprite}#icon-log-in`}></use>
+                        </svg></Link>
   </div>
 );
 
