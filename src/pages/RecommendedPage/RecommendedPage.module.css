@@ -9,12 +9,19 @@
   }
 
   @media screen and (min-width: 768px) {
+    .pageWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 16px;
+  }
    
 }
   @media screen and (min-width: 1440px) {
 
     .pageWrapper {
         display: flex;
+        flex-direction: row;
         gap: 16px;
         margin-top: 16px;
     }
