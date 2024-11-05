@@ -154,9 +154,40 @@ color: var(--primary-color-form-gray);
 
 /* blockquote */
 
-    .blockquote {
-        display: none;
-    }
+.blockquote {
+    border-radius: 12px;
+width: 313px;
+height: auto;
+background-color: var(--primary-color-main-gray);
+padding: 15px 20px 14px 20px;
+display: flex;
+gap: 14px;
+align-items: center;
+}
+
+.books {
+    width: 40px;
+    height: 40px;
+}
+
+.quoteContent {
+font-weight: 500;
+color: var(--primary-color-text);
+}
+
+.highlight, .quoteBook {
+    font-weight: 500;
+color: var(--primary-color-white);
+}
+.quoteAuthor {
+font-weight: 500;
+color: var(--primary-color-text);
+}
+ .quoteBook {
+    font-weight: 500;
+    margin-left: 8px;
+    color: var(--primary-color-text);
+ }
 
 
   }
