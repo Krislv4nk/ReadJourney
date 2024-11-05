@@ -4,7 +4,7 @@ import iphone from '../../../assets/images/iPhone.png';
 import sprite from '../../../assets/icons/sprite.svg';
 import LanguageSwitcher  from "../../Auth/LanguageSwitcher/LanguageSwitcher";
 
-export const AuthBackground = () => {
+export const AuthBackground = ({ showTitle = true }) => {
     return (
         <div className={css.wrapper}>
             <div className={css.formWrapper}>
@@ -17,7 +17,11 @@ export const AuthBackground = () => {
 </div>
                     <LanguageSwitcher/>
                     </div>
-                <h2 className={css.title}>Expand your mind, reading <span className={css.titleSpan}>a book</span></h2>
+                    {showTitle && (
+                    <h2 className={css.title}>
+                        Expand your mind, reading <span className={css.titleSpan}>a book</span>
+                    </h2>
+                )}
 
             </div>
             <div className={css.iphoneWrapper}>
