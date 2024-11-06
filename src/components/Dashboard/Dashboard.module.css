@@ -48,7 +48,6 @@
     .blockquote {
         border-radius: 12px;
     width: 295px;
-    height: auto;
     background-color: var(--primary-color-main-gray);
     padding: 15px 20px 14px 20px;
     display: flex;
@@ -227,37 +226,38 @@ color: var(--primary-color-form-gray);
 
 .blockquote {
     border-radius: 12px;
-width: 313px;
-height: auto;
-background-color: var(--primary-color-main-gray);
-padding: 15px 20px 14px 20px;
-display: flex;
-gap: 14px;
-align-items: center;
+width: 405px;
+padding: 20px;
+gap: 20px;
 }
 
 .books {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
 }
 
 .quoteContent {
+    line-height: 133%;
 font-weight: 500;
-color: var(--primary-color-text);
+font-size: 18px;
+
 }
 
 .highlight, .quoteBook {
+    line-height: 133%;
     font-weight: 500;
-color: var(--primary-color-white);
+font-size: 18px;
 }
 .quoteAuthor {
-font-weight: 500;
-color: var(--primary-color-text);
+    line-height: 133%;
+    font-weight: 500;
+    font-size: 18px;
 }
  .quoteBook {
+    line-height: 133%;
     font-weight: 500;
+    font-size: 18px;
     margin-left: 8px;
-    color: var(--primary-color-text);
  }
 
 
@@ -412,14 +412,9 @@ color: var(--primary-color-form-gray);
 /* blockquote */
 
     .blockquote {
-        border-radius: 12px;
 width: 313px;
 height: auto;
-background-color: var(--primary-color-main-gray);
 padding: 15px 20px 14px 20px;
-display: flex;
-gap: 14px;
-align-items: center;
     }
 
     .books {
@@ -427,22 +422,9 @@ align-items: center;
         height: 40px;
     }
    
-    .quoteContent {
-font-weight: 500;
-color: var(--primary-color-text);
+    .quoteContent, .highlight, .quoteBook, .quoteAuthor, .quoteBook {
+line-height: 129%;
     }
 
-.highlight, .quoteBook {
-        font-weight: 500;
-color: var(--primary-color-white);
-    }
-    .quoteAuthor {
- font-weight: 500;
-color: var(--primary-color-text);
-    }
-     .quoteBook {
-        font-weight: 500;
-        margin-left: 8px;
-        color: var(--primary-color-text);
-     }
+
   }
