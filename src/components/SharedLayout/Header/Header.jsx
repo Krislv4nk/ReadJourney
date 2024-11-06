@@ -28,6 +28,9 @@ export const Header = () => {
         <button className={css.userBarBtn} type='button'>U</button>
         <p className={css.userName}>User Name</p></div>
         <button className={css.logOutBtn} type='button'>Log out</button>
+        <button className={css.userMenu} type='button'><svg className={css.userMenuIcon}>
+          <use xlinkHref={`${sprite}#icon-menu`}></use>
+                        </svg></button>
       </div>
     </div>
   );

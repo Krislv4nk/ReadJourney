@@ -12,8 +12,7 @@ export const FunctionalDescription = ({ link }) => (
         <ul className={css.funList}>
             <li className={css.funItem}><span className={css.funPosition}>1</span>
             <p className={css.funDescription}>
-              <span className={css.funDescriptionAccent}>Create a personal library:</span> add the books you intend to read 
-           <br/> to it.</p></li>
+              <span className={css.funDescriptionAccent}>Create a personal library:</span> add the books you intend to read to it.</p></li>
             <li className={css.funItem}><span className={css.funPosition}>2</span>
             <p className={css.funDescription}>
               <span className={css.funDescriptionAccent}>Create your first workout:</span> define a goal, choose a period, start training.</p></li>

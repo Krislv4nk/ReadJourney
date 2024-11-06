@@ -4,9 +4,133 @@
 
  @media screen and (min-width: 320px) and (max-width: 374.99px) {
 
+
+  
+  .recommendedBooks {
+    border-radius: 30px;
+    width: 100%;
+max-width: 335px;
+height: 382px;
+background-color: var(--primary-color-dark-gray);
+padding: 40px 20px;
+}
+
+.recommendedTitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+color: var(--primary-color-white);
+}
+
+.recommendedBtnWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.recommendedBtn {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: 1px solid var(--primary-color-form-gray);
+    border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recommendedIcon {
+  width: 16px;
+  height: 16px;
+  stroke: var(--primary-color-form-gray);
+    fill: var(--primary-color-form-gray);
+}
+
+}
+
+@media screen and (min-width: 768px) {
+  .recommendedBooks {
+    border-radius: 30px;
+width: 704px;
+height: 663px;
+background-color: var(--primary-color-dark-gray);
+padding: 40px;
+}
+
+.recommendedTitle {
+font-weight: 700;
+font-size: 28px;
+line-height: 114%;
+color: var(--primary-color-white);
+}
+
+.recommendedBtnWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.recommendedBtn {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid var(--primary-color-form-gray);
+    border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recommendedIcon {
+  width: 40px;
+  height: 40px;
+  
+}
 }
 
   @media screen and (min-width: 375px) {
+
+    .recommendedBooks {
+      border-radius: 30px;
+width: 335px;
+height: 382px;
+background-color: var(--primary-color-dark-gray);
+padding: 40px 20px;
+  }
+  
+  .recommendedTitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+color: var(--primary-color-white);
+  }
+
+  .recommendedBtnWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
+  .recommendedBtn {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: 1px solid var(--primary-color-form-gray);
+      border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .recommendedIcon {
+    width: 16px;
+    height: 16px;
+    stroke: var(--primary-color-form-gray);
+      fill: var(--primary-color-form-gray);
+  }
 
   }
 
@@ -37,7 +161,8 @@ color: var(--primary-color-white);
     width: 40px;
     height: 40px;
     background-color: transparent;
-    border: none;
+    border: 1px solid var(--primary-color-form-gray);
+      border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,7 +204,8 @@ color: var(--primary-color-white);
       width: 40px;
       height: 40px;
       background-color: transparent;
-      border: none;
+      border: 1px solid var(--primary-color-form-gray);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -88,7 +214,8 @@ color: var(--primary-color-white);
     .recommendedIcon {
       width: 40px;
       height: 40px;
-      
+      stroke: var(--primary-color-form-gray);
+      fill: var(--primary-color-form-gray);
     }
 
 }
