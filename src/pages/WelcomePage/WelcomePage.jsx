@@ -14,7 +14,7 @@ const WelcomePage = () => {
         <Container>
       <AuthBackground showTitle={false}/>
       <div className={css.welcomeWrapper}>
-      <h1 className={css.welcomeTitle}>Welcome to ReadJourney! <span className={css.welcomeTitleSpan}>Dive into the world of books!</span></h1>
+      <h1 className={css.welcomeTitle}>Welcome to ReadJourney!<br/> <span className={css.welcomeTitleSpan}>Dive into the world of books!</span></h1>
       <button type="button" onClick={TryClick} className={css.welcomeBtn}>
       Start Your Journey
       </button>
