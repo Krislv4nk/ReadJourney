@@ -44,7 +44,6 @@ color: var(--primary-color-white);
   width: 16px;
   height: 16px;
   stroke: var(--primary-color-form-gray);
-    fill: var(--primary-color-form-gray);
 }
 
 }
@@ -129,7 +128,6 @@ color: var(--primary-color-white);
     width: 16px;
     height: 16px;
     stroke: var(--primary-color-form-gray);
-      fill: var(--primary-color-form-gray);
   }
 
   }
@@ -215,7 +213,6 @@ color: var(--primary-color-white);
       width: 40px;
       height: 40px;
       stroke: var(--primary-color-form-gray);
-      fill: var(--primary-color-form-gray);
     }
 
 }
