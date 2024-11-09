@@ -482,25 +482,14 @@ gap: 20px;
 
 .quoteContent {
     line-height: 133%;
-font-weight: 500;
-font-size: 18px;
 
 }
 
-.highlight, .quoteBook {
-    line-height: 133%;
-    font-weight: 500;
-font-size: 18px;
-}
 .quoteAuthor {
     line-height: 133%;
-    font-weight: 500;
-    font-size: 18px;
 }
  .quoteBook {
     line-height: 133%;
-    font-weight: 500;
-    font-size: 18px;
     margin-left: 8px;
  }
 
@@ -547,8 +536,8 @@ padding: 15px 20px 14px 20px;
     }
 
     .books {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
     }
    
     .quoteContent, .highlight, .quoteBook, .quoteAuthor, .quoteBook {

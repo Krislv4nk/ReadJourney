@@ -50,7 +50,7 @@
 
 
 import { useEffect } from 'react';
-import {useParams, useNavigate } from 'react-router-dom';
+import {useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'; 
 import { selectAuthVerified } from '../../redux/auth/selectors';
 import { verifyUser } from '../../redux/auth/operations'; 
@@ -64,7 +64,6 @@ import css from './Auth.module.css';
 const VerifyEmailPage = () => {
   const { verificationToken } = useParams();
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const isVerified = useSelector(selectAuthVerified);
 
@@ -73,7 +72,6 @@ const VerifyEmailPage = () => {
       dispatch(verifyUser(verificationToken))
         .then(() => {
           successToast('Email has been successfully verified! You can sign in to your account!');
-          navigate('/signIn');
         })
         .catch((error) => {
           console.error("Verification error:", error);
