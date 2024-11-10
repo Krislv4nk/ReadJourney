@@ -50,57 +50,50 @@
 
 
 import { useEffect } from 'react';
-import {useParams } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux'; 
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import { selectAuthVerified } from '../../redux/auth/selectors';
-import { verifyUser } from '../../redux/auth/operations'; 
+import { successToast } from '../../helpers/services';
 
 import Container from "../../components/SharedLayout/Container/Container";
-import CircularProgressWithLabel from "../../components/SharedLayout/CircularProgressWithLabel/CircularProgressWithLabel";
 import { AuthBackground } from "../../components/Auth/AuthBackground/AuthBackground";
-import { successToast, errorToast } from '../../helpers/services';
+import CircularProgressWithLabel from "../../components/SharedLayout/CircularProgressWithLabel/CircularProgressWithLabel";
 import css from './Auth.module.css';
 
 const VerifyEmailPage = () => {
-  const { verificationToken } = useParams();
-  const dispatch = useDispatch();
-
+  const navigate = useNavigate(); 
   const isVerified = useSelector(selectAuthVerified);
 
   useEffect(() => {
-    if (verificationToken) {
-      dispatch(verifyUser(verificationToken))
-        .then(() => {
-          successToast('Email has been successfully verified! You can sign in to your account!');
-        })
-        .catch((error) => {
-          console.error("Verification error:", error);
-          errorToast('User not found or token invalid.');
-          navigate('/error');
-        });
+    if (isVerified) {
+      successToast('Email has been successfully verified! You can sign in to your account!');
     } else {
-      console.error("Verification token is undefined");
       navigate('/error');
     }
-  }, [dispatch, verificationToken, navigate]);
-
+  }, [isVerified, navigate]);
 
   return (
     <Container>
       <AuthBackground />
       {isVerified ? (
         <>
-          <h3 className={css.verifyHeader}>Email has been successfully verified!</h3>
-          
-        </>
+        <h3 className={css.verifyHeader}>Email has been successfully verified!</h3>
+      </>
       ) : (
-        <CircularProgressWithLabel />
+
+       <>
+       <CircularProgressWithLabel />
+        <p>Verifying...</p>
+        </>
       )}
     </Container>
   );
 };
 
 export default VerifyEmailPage;
+
+
+
 
 
 
