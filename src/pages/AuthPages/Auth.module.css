@@ -1,0 +1,110 @@
+
+@media screen and (min-width: 320px) and (max-width: 374.99px) {
+
+      /* VerifyEmailPage */
+      .verifyWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        margin: 0 auto; 
+        bottom: 661px; 
+        width: 90%;
+        max-width: 335px;
+        border-radius: 12px;
+        padding: 20px;
+        background-color: var(--primary-color-main-gray);
+      }
+
+      .verifyTitle {
+        font-weight: 700;
+    font-size: 24px; 
+    line-height: 100%;
+    color: var(--primary-color-white);
+      }
+
+      .verifyTitleAccent {
+        color: var(--primary-color-text);
+    font-weight: 700;
+    font-size: 24px; 
+    line-height: 100%;
+      }
+
+      .verifyLink {
+        font-weight: 800;
+text-decoration: underline;
+text-decoration-skip-ink: none;
+color: var(--primary-color-form-gray);
+      }
+}
+
+  @media screen and (min-width: 375px) {
+
+      /* VerifyEmailPage */
+      .verifyWrapper {
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto; 
+    bottom: 641px; 
+        width: 295px;
+        border-radius: 12px;
+        padding: 20px;
+        background-color: var(--primary-color-main-gray);
+      }
+
+      .verifyTitle {
+        font-weight: 700;
+    font-size: 24px; 
+    line-height: 100%;
+    color: var(--primary-color-white);
+      }
+
+      .verifyTitleAccent {
+        color: var(--primary-color-text);
+    font-weight: 700;
+    font-size: 24px; 
+    line-height: 100%;
+      }
+
+      .verifyLink {
+        font-weight: 800;
+text-decoration: underline;
+text-decoration-skip-ink: none;
+color: var(--primary-color-form-gray);
+      }
+  }
+
+  @media screen and (min-width: 768px) {
+   
+      /* VerifyEmailPage */
+      .verifyWrapper {
+padding: 40px;
+        bottom: 311px;
+        width: 472px;
+      }
+
+      .verifyTitle {
+        font-weight: 700;
+font-size: 31px;
+line-height: 100%;
+    color: var(--primary-color-white);
+      }
+
+      .verifyTitleAccent {
+        color: var(--primary-color-text);
+        font-weight: 700;
+        font-size: 31px;
+        line-height: 100%;
+      }
+}
+  @media screen and (min-width: 1440px) {
+    
+     /* VerifyEmailPage */
+     .verifyWrapper {
+        bottom: 241px;
+        margin-left: 138px;
+      }
+}
