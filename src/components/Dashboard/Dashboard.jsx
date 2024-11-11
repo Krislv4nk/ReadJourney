@@ -6,6 +6,8 @@ import { AddBook } from './MyLibrary/AddBook/AddBook';
 import { QuoteBlock } from './Recommended/QuoteBlock/QuoteBlock';
 import { FunctionalDescription } from './Recommended/FunctionalDescription/FunctionalDescription';
 import { RecommendedBooks } from './MyLibrary/RecommendedBooks/RecommendedBooks';
+import { AddReading } from './ReadingPage/AddReadingForm/AddReadingForm';
+import { Details } from './ReadingPage/DetailsBlock/Details';
 import css from './Dashboard.module.css';
 
 const Dashboard = ({ page }) => {
@@ -33,6 +35,12 @@ const Dashboard = ({ page }) => {
         <>
           <AddBook />
           <RecommendedBooks link="/recommended" />
+        </>
+      )}
+      {page === "reading" && (
+        <>
+          <AddReading />
+          <Details />
         </>
       )}
     </div>
