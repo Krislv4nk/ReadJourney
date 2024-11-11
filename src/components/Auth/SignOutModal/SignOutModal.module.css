@@ -1,0 +1,161 @@
+
+
+
+@media screen and (min-width: 320px) and (max-width: 374.99px) {
+
+    .wrapper {
+        border-radius: 12px;
+        padding: 30px;
+        background-color: var(--primary-color-dark-gray);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .closeBtn {
+        cursor: pointer;
+        border: none;
+         display: flex;
+        justify-content: center;
+        align-items: center;
+width: 28px;
+height: 28px;
+position: absolute;
+top: 20px;
+right: 20px;
+background-color: transparent;
+    }
+
+    .iconClose {
+        width: 14px;
+  height: 14px;
+    }
+
+    .title {
+        font-size: 21px;
+        font-weight: 600;
+    }
+    .formInfo {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .logOutBtn {
+        border-radius: 30px;
+        padding: 12px;
+        width: 100%;
+        max-width: 225px;
+        height: 44px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 100%;
+        background-color: var(--primary-color-white);
+        margin-top: 12px;
+    }
+}
+
+  @media screen and (min-width: 375px) {
+
+    .wrapper {
+        border-radius: 12px;
+        padding: 40px;
+        background-color: var(--primary-color-dark-gray);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .closeBtn {
+        cursor: pointer;
+        border: none;
+         display: flex;
+        justify-content: center;
+        align-items: center;
+width: 40px;
+height: 40px;
+position: absolute;
+top: 20px;
+right: 20px;
+background-color: transparent;
+    }
+
+    .iconClose {
+        width: 32px;
+  height: 32px;
+    }
+
+    .title {
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .formInfo {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .logOutBtn {
+        border-radius: 30px;
+        padding: 16px;
+        width: 225px;
+        height: 52px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 100%;
+        background-color: var(--primary-color-white);
+        margin-top: 12px;
+    }
+
+  }
+
+  @media screen and (min-width: 768px) {
+
+    .wrapper {
+        border-radius: 12px;
+        padding: 40px;
+        background-color: var(--primary-color-dark-gray);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+    .closeBtn {
+        cursor: pointer;
+        border: none;
+         display: flex;
+        justify-content: center;
+        align-items: center;
+width: 40px;
+height: 40px;
+position: absolute;
+top: 20px;
+right: 20px;
+background-color: transparent;
+    }
+
+    .iconClose {
+        width: 32px;
+  height: 32px;
+    }
+
+    .title {
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .formInfo {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .logOutBtn {
+        border-radius: 30px;
+        padding: 16px;
+        width: 225px;
+        height: 52px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 100%;
+        background-color: var(--primary-color-white);
+        margin-top: 12px;
+    }
+   
+}
+  @media screen and (min-width: 1440px) {
+    
+}

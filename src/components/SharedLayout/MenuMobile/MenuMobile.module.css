@@ -10,7 +10,7 @@
         height: 100%;
 max-height: 812px;
 background-color: var(--primary-color-main-gray);
-
+position: relative;
     }
 
     .btnClose {
@@ -80,7 +80,7 @@ background-color: var(--primary-color-main-gray);
         .logOutBtn {
             border: 1px solid rgba(249, 249, 249, 0.2);
 border-radius: 30px;
-padding: 10px 20px;
+padding: 10px;
 width: 91px;
 height: 38px;
 background-color: transparent;
@@ -167,7 +167,7 @@ background-color: var(--primary-color-main-gray);
         .logOutBtn {
             border: 1px solid rgba(249, 249, 249, 0.2);
 border-radius: 30px;
-padding: 10px 20px;
+padding: 10px;
 width: 91px;
 height: 38px;
 background-color: transparent;

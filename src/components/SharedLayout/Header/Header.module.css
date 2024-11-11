@@ -269,6 +269,7 @@ align-items: center;
 
 
 .logOutBtn {
+    display: block;
     border: 1px solid rgba(249, 249, 249, 0.2);
 border-radius: 30px;
 padding: 12px 28px;
@@ -279,6 +280,9 @@ font-size: 16px;
 line-height: 112%;
 background-color: transparent;
 color: var(--primary-color-white);
+}
+.userMenu {
+    display: none;
 }
 }
 
