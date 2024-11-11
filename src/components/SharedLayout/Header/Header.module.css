@@ -77,6 +77,13 @@ border: none;
 width: 28px;
 fill: var(--primary-color-white);
 }
+
+.backdropNone {
+    width: 100%;
+   height: 100%;
+   background-color: transparent;
+   overflow: scroll;
+ }
 }
 
   @media screen and (min-width: 375px) {
@@ -156,6 +163,13 @@ border: none;
 width: 28px;
 fill: var(--primary-color-white);
 }
+
+.backdropNone {
+    width: 100%;
+   height: 100%;
+   background-color: transparent;
+   overflow: scroll;
+ }
   }
 
 
