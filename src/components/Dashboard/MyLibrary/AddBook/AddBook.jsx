@@ -2,42 +2,72 @@
 
 import  { useState } from 'react';
 
-export const AddBook = () => {
-  const [form, setForm] = useState({ title: '', author: '', genre: '' });
-  const [error, setError] = useState(null);
+import React from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import axios from 'axios';
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+export const AddBook = () => {
+  const initialValues = {
+    title: '',
+    author: '',
+    pages: ''
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const validationSchema = Yup.object({
+    title: Yup.string().required('Required'),
+    author: Yup.string().required('Required'),
+    pages: Yup.number()
+      .required('Required')
+      .positive('Must be a positive number')
+      .integer('Must be an integer')
+  });
+
+  const handleSubmit = async (values, { setSubmitting, resetForm, setStatus }) => {
     try {
-      // Відправка запиту на backend
-      const response = await fetch('/api/books', {
-        method: 'POST',
-        body: JSON.stringify(form),
-      });
-      if (!response.ok) {
-        const errorData = await response.json();
-        setError(errorData.message);
-        return;
-      }
-      alert('Книгу успішно додано!');
-    } catch (err) {
-      setError('Сталася помилка, спробуйте ще раз.');
+      const response = await axios.post('https://backend-readjourney.onrender.com/books', values);
+      setStatus({ success: true, message: 'Book added successfully!' });
+      resetForm();
+      // 
+    } catch (error) {
+      setStatus({ success: false, message: error.response?.data?.message || 'An error occurred' });
+    } finally {
+      setSubmitting(false);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input name="title" value={form.title} onChange={handleChange} placeholder="Title" required />
-      <input name="author" value={form.author} onChange={handleChange} placeholder="Author" required />
-      <input name="genre" value={form.genre} onChange={handleChange} placeholder="Genre" required />
-      <button type="submit">Add book</button>
-      {error && <div className="error">{error}</div>}
-    </form>
+    <Formik
+      initialValues={initialValues}
+      validationSchema={validationSchema}
+      onSubmit={handleSubmit}
+    >
+      {({ isSubmitting, status }) => (
+        <Form>
+          <div>
+            <label>Title</label>
+            <Field type="text" name="title" />
+            <ErrorMessage name="title" component="div" className="error" />
+          </div>
+          <div>
+            <label>Author</label>
+            <Field type="text" name="author" />
+            <ErrorMessage name="author" component="div" className="error" />
+          </div>
+          <div>
+            <label>Pages</label>
+            <Field type="number" name="pages" />
+            <ErrorMessage name="pages" component="div" className="error" />
+          </div>
+          <button type="submit" disabled={isSubmitting}>Add book</button>
+          {status && <div className={status.success ? 'success' : 'error'}>{status.message}</div>}
+        </Form>
+      )}
+    </Formik>
   );
 };
+
+
+
 
  

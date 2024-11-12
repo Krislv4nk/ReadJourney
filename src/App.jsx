@@ -50,8 +50,9 @@ function App() {
 
 <Route path="/" element={<SharedLayout />}>
 <Route path='/recommended' element={<RecommendedPage />} />
+<Route path="/library" element={<LibraryPage />} />
 {/* <Route path='/recommended' element={<PrivateRoute><RecommendedPage /></PrivateRoute>} /> */}
-        <Route path="/library" element={<PrivateRoute><LibraryPage /></PrivateRoute>} />
+        {/* <Route path="/library" element={<PrivateRoute><LibraryPage /></PrivateRoute>} /> */}
         </Route>
 
       <Route path="*" element={<ErrorPage />} /> 
