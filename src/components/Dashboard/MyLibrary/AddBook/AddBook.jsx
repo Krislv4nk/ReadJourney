@@ -1,11 +1,8 @@
 
 
-import  { useState } from 'react';
-
-import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import axios from 'axios';
+import css from './AddBook.module.css';
 
 export const AddBook = () => {
   const initialValues = {
@@ -25,7 +22,7 @@ export const AddBook = () => {
 
   const handleSubmit = async (values, { setSubmitting, resetForm, setStatus }) => {
     try {
-      const response = await axios.post('https://backend-readjourney.onrender.com/books', values);
+      
       setStatus({ success: true, message: 'Book added successfully!' });
       resetForm();
       // 
@@ -43,23 +40,24 @@ export const AddBook = () => {
       onSubmit={handleSubmit}
     >
       {({ isSubmitting, status }) => (
-        <Form>
-          <div>
-            <label>Title</label>
-            <Field type="text" name="title" />
+        <Form className={css.form}>
+          <h3 className={css.title}>Create your library:</h3>
+          <div className={css.inputWrapper}>
+            <label className={css.label}>Book title:</label>
+            <Field className={css.field} type="text" name="title" placeholder="Enter text"/>
             <ErrorMessage name="title" component="div" className="error" />
           </div>
-          <div>
-            <label>Author</label>
-            <Field type="text" name="author" />
-            <ErrorMessage name="author" component="div" className="error" />
+          <div className={css.inputWrapper}>
+            <label className={css.label}>The author:</label>
+            <Field className={css.field} type="text" name="author" />
+            <ErrorMessage name="author" component="div" className="error" placeholder="Enter text"/>
           </div>
-          <div>
-            <label>Pages</label>
-            <Field type="number" name="pages" />
-            <ErrorMessage name="pages" component="div" className="error" />
+          <div className={css.inputWrapper}>
+            <label className={css.label}>Number of pages:</label>
+            <Field className={css.field} type="number" name="pages" />
+            <ErrorMessage  name="pages" component="div" className="error" placeholder="Enter text"/>
           </div>
-          <button type="submit" disabled={isSubmitting}>Add book</button>
+          <button className={css.formBtn} type="submit" disabled={isSubmitting} title='Add book'>Add book</button>
           {status && <div className={status.success ? 'success' : 'error'}>{status.message}</div>}
         </Form>
       )}

@@ -2,7 +2,7 @@
 
 import { Link } from 'react-router-dom';
 import sprite from '../../../../assets/icons/sprite.svg';
-import css from '../../Dashboard.module.css';
+import css from './FunctionalDescription.module.css';
 
 
 

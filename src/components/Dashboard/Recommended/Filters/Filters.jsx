@@ -3,7 +3,7 @@
 
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import css from '../../Dashboard.module.css';
+import css from './Filters.module.css';
 
 export const Filters = () => {
   

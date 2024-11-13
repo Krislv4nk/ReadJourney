@@ -1,7 +1,7 @@
 
 
 import { quotes } from '../../../../helpers/quotes.js';
-import css from './../../Dashboard.module.css';
+import css from './QuoteBlock.module.css';
 import books from '../../../../assets/images/books.png';
 
 export const QuoteBlock = () => {
