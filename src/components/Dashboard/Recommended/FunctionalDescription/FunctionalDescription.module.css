@@ -139,7 +139,7 @@ text-decoration: underline;
 text-decoration-skip-ink: none;
 display: flex;
 justify-content: space-between;
-align-self: center;
+align-items: center;
 color: var(--primary-color-form-gray);
 }
 
