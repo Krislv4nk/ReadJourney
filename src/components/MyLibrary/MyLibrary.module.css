@@ -2,13 +2,35 @@
 
 @media screen and (min-width: 320px) and (max-width: 374.99px) {
 
+  .myLibraryWrapper {
+       border-radius: 30px;
+       width: 100%;
+max-width: 335px;
+height: 407px;
+background-color: var(--primary-color-dark-gray);
+padding: 40px 20px 20px 20px;
+    }
 }
 
   @media screen and (min-width: 375px) {
+    .myLibraryWrapper {
+       border-radius: 30px;
+width: 335px;
+height: 407px;
+background-color: var(--primary-color-dark-gray);
+padding: 40px 20px 20px 20px;
+    }
 
   }
 
   @media screen and (min-width: 768px) {
+    .myLibraryWrapper {
+       border-radius: 30px;
+width: 704px;
+height: 518px;
+background-color: var(--primary-color-dark-gray);
+padding: 40px;
+    }
    
 }
   @media screen and (min-width: 1440px) {
