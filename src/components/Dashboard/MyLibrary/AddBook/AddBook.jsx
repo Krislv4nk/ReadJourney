@@ -45,17 +45,17 @@ export const AddBook = () => {
           <div className={css.inputWrapper}>
             <label className={css.label}>Book title:</label>
             <Field className={css.field} type="text" name="title" placeholder="Enter text"/>
-            <ErrorMessage name="title" component="div" className="error" />
+            <ErrorMessage name="title" component="div" className={css.error} />
           </div>
           <div className={css.inputWrapper}>
             <label className={css.label}>The author:</label>
             <Field className={css.field} type="text" name="author" placeholder="Enter text"/>
-            <ErrorMessage name="author" component="div" className="error"/>
+            <ErrorMessage name="author" component="div" className={css.error}/>
           </div>
           <div className={css.inputWrapper}>
             <label className={css.label}>Number of pages:</label>
             <Field className={css.field} type="number" name="pages" placeholder="Enter numbers" />
-            <ErrorMessage  name="pages" component="div" className="error"/>
+            <ErrorMessage  name="pages" component="div" className={css.error}/>
           </div>
           <button className={css.formBtn} type="submit" disabled={isSubmitting} title='Add book'>Add book</button>
           {status && <div className={status.success ? 'success' : 'error'}>{status.message}</div>}
