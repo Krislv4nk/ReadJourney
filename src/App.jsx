@@ -18,10 +18,11 @@ import ForgotPasswordPage from 'pages/AuthPages/ForgotPasswordPage';
 import RecoverPasswordPage from 'pages/AuthPages/RecoverPasswordPage';
 import RecommendedPage from 'pages/RecommendedPage/RecommendedPage';
 import LibraryPage from 'pages/LibraryPage/LibraryPage';
+import ReadingPage from 'pages/ReadingPage/ReadingPage';
 import VerifyEmailPage from 'pages/AuthPages/VerifyEmailPage';
 import ErrorPage from 'pages/ErrorPage/ErrorPage';
 
-import PrivateRoute from 'components//Routes/PrivateRoute/PrivateRoute';
+// import PrivateRoute from 'components//Routes/PrivateRoute/PrivateRoute';
 import PublicRoute from './components/Routes/PublicRoute/PublicRoute';
 import CircularProgressWithLabel from './components/SharedLayout/CircularProgressWithLabel/CircularProgressWithLabel';
 
@@ -51,8 +52,10 @@ function App() {
 <Route path="/" element={<SharedLayout />}>
 <Route path='/recommended' element={<RecommendedPage />} />
 <Route path="/library" element={<LibraryPage />} />
+<Route path= "/reading" element={<ReadingPage/>}/>
 {/* <Route path='/recommended' element={<PrivateRoute><RecommendedPage /></PrivateRoute>} /> */}
-        {/* <Route path="/library" element={<PrivateRoute><LibraryPage /></PrivateRoute>} /> */}
+        {/* <Route path="/library" element={<PrivateRoute><LibraryPage /></PrivateRoute>} /> 
+        <Route path= "/reading" element={<PrivateRoute><ReadingPage/></PrivateRoute>}/>*/}
         </Route>
 
       <Route path="*" element={<ErrorPage />} /> 

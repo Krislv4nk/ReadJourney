@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-export const RecommendedBooks = () => {
+export const RecommendedLibraryBooks = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {

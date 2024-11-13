@@ -9,11 +9,9 @@ import css from './RecommendedPage.module.css';
 const RecommendedPage = () => {
   return (
    
-      <div>
       <div className={css.pageWrapper}>
         <Dashboard page="recommended" />
         <RecommendedBooks />
-      </div>
       </div>
     
   );

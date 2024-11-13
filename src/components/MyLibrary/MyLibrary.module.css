@@ -1,0 +1,23 @@
+
+
+@media screen and (min-width: 320px) and (max-width: 374.99px) {
+
+}
+
+  @media screen and (min-width: 375px) {
+
+  }
+
+  @media screen and (min-width: 768px) {
+   
+}
+  @media screen and (min-width: 1440px) {
+    
+    .myLibraryWrapper {
+        border-radius: 30px;
+width: 847px;
+height: auto;
+background-color: var(--primary-color-dark-gray);
+padding: 40px;
+    }
+}
