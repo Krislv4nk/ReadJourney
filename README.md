@@ -37,13 +37,13 @@ Make sure you have [Node.js](https://nodejs.org/) installed.
    git clone https://github.com/yourusername/book-reader-app.git
 
 2. Navigate to the project directory:
-
-cd book-reader-app
+     ```bash
+   cd book-reader-app
 
 
 3. Install dependencies:
-
-npm install
+    ```bash
+   npm install
 
 
 
@@ -53,11 +53,11 @@ Create a .env file in the root directory and add your environment variables (e.g
 
 Running the Application
 
-To start the development server, run:
+4. To start the development server, run:
+    ```bash                 
+          npm run dev
 
-npm run dev
-
-Project Structure
+## Project Structure
 
 src/components - Reusable components
 
@@ -81,7 +81,7 @@ npm run lint - Run ESLint
 npm run format - Format code with Prettier
 
 
-Contributing
+## Contributing
 
 Contributions are welcome! Please fork the repository and create a pull request.
 
