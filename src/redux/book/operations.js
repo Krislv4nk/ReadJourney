@@ -5,6 +5,25 @@ import axios from 'axios';
 axios.defaults.baseURL =import.meta.env.VITE_BASE_URL;
 
 
+export const getRecommendedThunk = createAsyncThunk(
+  'books/getRecommended',
+  async (_, thunkAPI) => {
+    try {
+      const { data } = await axios.get('/books/recommended', {
+        params: {
+          limit: 10,
+        },
+      });
+      console.log('API Response:', data); 
+      return data;
+    } catch (error) {
+      console.error('API Error:', error); 
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+
 
 export const getBookByISBNThunk = createAsyncThunk(
   'books/getBookByISBN',
