@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://krislv4nk.github.io/ReadJourney",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
