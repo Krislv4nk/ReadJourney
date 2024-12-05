@@ -19,8 +19,9 @@ export default defineConfig({
   },
   base: '/ReadJourney/', 
   build: {
-    outDir: 'dist',
+    outDir: 'dist', 
   },
 });
+
 
 
