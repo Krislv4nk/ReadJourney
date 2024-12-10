@@ -10,17 +10,17 @@ import { refreshUser } from './redux/auth/operations';
 import { selectAuthIsRefreshing } from './redux/auth/selectors';
 import  '../src/helpers/i18n';
 
-import SharedLayout from 'components/SharedLayout/SharedLayout';
-import WelcomePage from 'pages/WelcomePage/WelcomePage';
-import SignUpPage from 'pages/AuthPages/SignUpPage';
-import SignInPage from 'pages/AuthPages/SignInPage';
-import ForgotPasswordPage from 'pages/AuthPages/ForgotPasswordPage';
-import RecoverPasswordPage from 'pages/AuthPages/RecoverPasswordPage';
-import RecommendedPage from 'pages/RecommendedPage/RecommendedPage';
-import LibraryPage from 'pages/LibraryPage/LibraryPage';
-import ReadingPage from 'pages/ReadingPage/ReadingPage';
-import VerifyEmailPage from 'pages/AuthPages/VerifyEmailPage';
-import ErrorPage from 'pages/ErrorPage/ErrorPage';
+import SharedLayout from './components/SharedLayout/SharedLayout';
+import WelcomePage from './pages/WelcomePage/WelcomePage';
+import SignUpPage from './pages/AuthPages/SignUpPage';
+import SignInPage from './pages/AuthPages/SignInPage';
+import ForgotPasswordPage from './pages/AuthPages/ForgotPasswordPage';
+import RecoverPasswordPage from './pages/AuthPages/RecoverPasswordPage';
+import RecommendedPage from './pages/RecommendedPage/RecommendedPage';
+import LibraryPage from './pages/LibraryPage/LibraryPage';
+import ReadingPage from './pages/ReadingPage/ReadingPage';
+import VerifyEmailPage from './pages/AuthPages/VerifyEmailPage';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
 
 // import PrivateRoute from 'components//Routes/PrivateRoute/PrivateRoute';
 import PublicRoute from './components/Routes/PublicRoute/PublicRoute';
