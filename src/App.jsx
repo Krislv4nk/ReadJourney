@@ -24,7 +24,7 @@ import ErrorPage from './pages/ErrorPage/ErrorPage';
 
 import PrivateRoute from './components/Routes/PrivateRoute/PrivateRoute';
 import PublicRoute from './components/Routes/PublicRoute/PublicRoute';
-import CircularProgressWithLabel from './components/SharedLayout/CircularProgressWithLabel/CircularProgressWithLabel';
+// import CircularProgressWithLabel from './components/SharedLayout/CircularProgressWithLabel/CircularProgressWithLabel';
 
 // import.meta.env.VITE_BASE_URL;
 
@@ -36,27 +36,13 @@ function App() {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  if (isFetchingCurrentUser) {
-    return <CircularProgressWithLabel/>; 
-  }
 
-  return (
+  return ( !isFetchingCurrentUser && (
     <Routes>
-{/* <Route index element={<WelcomePage />} />
-<Route path="/signUp"  element={<SignUpPage />} />
-      <Route path="/signIn" element={<SignInPage />} />
-      <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-      <Route path="/users/verify/success" element={<VerifyEmailPage />} />
-        <Route path="/forgot-password/:token" element={<RecoverPasswordPage />} />
-
-<Route path="/" element={<SharedLayout />}>
-<Route path='/recommended' element={<RecommendedPage />} />
-<Route path="/library" element={<LibraryPage />} />
-        <Route path="/reading" element={<ReadingPage />} /> */}
         
         <Route index element={<WelcomePage />} />
-<Route path="/signUp"  element={<PublicRoute><SignUpPage /></PublicRoute>} />
-      <Route path="/signIn" element={<PublicRoute><SignInPage /></PublicRoute>} />
+<Route path="/signup"  element={<PublicRoute><SignUpPage /></PublicRoute>} />
+      <Route path="/signin" element={<PublicRoute><SignInPage /></PublicRoute>} />
       <Route path="/forgot-password" element={<PublicRoute><ForgotPasswordPage /></PublicRoute>} />
       <Route path="/users/verify/success" element={<PublicRoute><VerifyEmailPage /></PublicRoute>} />
         <Route path="/forgot-password/:token" element={<PublicRoute><RecoverPasswordPage /></PublicRoute>} /> 
@@ -68,6 +54,7 @@ function App() {
 
       <Route path="*" element={<ErrorPage />} /> 
     </Routes>
+  )
   );
 }
 
@@ -76,3 +63,15 @@ export default App;
 
 
 // kris.lv4nk00@gmail.com
+
+{/* <Route index element={<WelcomePage />} />
+<Route path="/signUp"  element={<SignUpPage />} />
+      <Route path="/signIn" element={<SignInPage />} />
+      <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+      <Route path="/users/verify/success" element={<VerifyEmailPage />} />
+        <Route path="/forgot-password/:token" element={<RecoverPasswordPage />} />
+
+<Route path="/" element={<SharedLayout />}>
+<Route path='/recommended' element={<RecommendedPage />} />
+<Route path="/library" element={<LibraryPage />} />
+        <Route path="/reading" element={<ReadingPage />} /> */}
