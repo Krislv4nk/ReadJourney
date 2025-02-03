@@ -22,7 +22,7 @@ import ReadingPage from './pages/ReadingPage/ReadingPage';
 import VerifyEmailPage from './pages/AuthPages/VerifyEmailPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 
-import PrivateRoute from 'components//Routes/PrivateRoute/PrivateRoute';
+import PrivateRoute from './components/Routes/PrivateRoute/PrivateRoute';
 import PublicRoute from './components/Routes/PublicRoute/PublicRoute';
 import CircularProgressWithLabel from './components/SharedLayout/CircularProgressWithLabel/CircularProgressWithLabel';
 
