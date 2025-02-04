@@ -1,23 +1,23 @@
 
 
 
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { selectRecommendedBooks } from '../../redux/book/selectors';
-import { getRecommendedThunk } from '../../redux/book/operations';
+// import { useEffect } from 'react';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { selectRecommendedBooks } from '../../redux/book/selectors';
+// import { getRecommendedThunk } from '../../redux/book/operations';
 import css from './RecommendedBooks.module.css';
 import sprite from '../../assets/icons/sprite.svg';
 
 export const RecommendedBooks = () => {
 
-    const dispatch = useDispatch();
-  const recommendedBooks = useSelector(selectRecommendedBooks);
+  //   const dispatch = useDispatch();
+  // const recommendedBooks = useSelector(selectRecommendedBooks);
 
-  useEffect(() => {
-    dispatch(getRecommendedThunk());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getRecommendedThunk());
+  // }, [dispatch]);
 
-  console.log(recommendedBooks);
+  // console.log(recommendedBooks);
 
   return (
     <div className={css.recommendedBooks}>
@@ -40,9 +40,9 @@ export const RecommendedBooks = () => {
       {error && <p className={css.error}>Error: {error}</p>} */}
 
       <ul>
-        {recommendedBooks.map(book => (
+        {/* {recommendedBooks.map(book => (
           <li key={book.id}>{book.title}</li>
-        ))}
+        ))} */}
       </ul>
     </div>
   );

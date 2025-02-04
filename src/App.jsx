@@ -39,15 +39,18 @@ function App() {
 
   return ( !isFetchingCurrentUser && (
     <Routes>
-        
-        <Route index element={<WelcomePage />} />
-<Route path="/signup"  element={<PublicRoute><SignUpPage /></PublicRoute>} />
-      <Route path="/signin" element={<PublicRoute><SignInPage /></PublicRoute>} />
-      <Route path="/forgot-password" element={<PublicRoute><ForgotPasswordPage /></PublicRoute>} />
-      <Route path="/users/verify/success" element={<PublicRoute><VerifyEmailPage /></PublicRoute>} />
-        <Route path="/forgot-password/:token" element={<PublicRoute><RecoverPasswordPage /></PublicRoute>} /> 
         <Route path="/" element={<SharedLayout />}>
-<Route path='/recommended' element={<PrivateRoute><RecommendedPage /></PrivateRoute>} />
+        <Route index element={<WelcomePage />} />
+        
+        <Route path='/recommended' element={<PrivateRoute><RecommendedPage /></PrivateRoute>} />
+
+<Route path="signup"  element={<PublicRoute><SignUpPage /></PublicRoute>} />
+      <Route path="signin" element={<PublicRoute><SignInPage /></PublicRoute>} />
+      <Route path="forgot-password" element={<PublicRoute><ForgotPasswordPage /></PublicRoute>} />
+      <Route path="users/verify/success" element={<PublicRoute><VerifyEmailPage /></PublicRoute>} />
+        <Route path="forgot-password/:token" element={<PublicRoute><RecoverPasswordPage /></PublicRoute>} /> 
+        
+
         <Route path="/library" element={<PrivateRoute><LibraryPage /></PrivateRoute>} /> 
         <Route path= "/reading" element={<PrivateRoute><ReadingPage/></PrivateRoute>}/>
         </Route>
@@ -64,14 +67,20 @@ export default App;
 
 // kris.lv4nk00@gmail.com
 
-{/* <Route index element={<WelcomePage />} />
+{/* <Route path='/recommended' element={<RecommendedPage />} />
+
 <Route path="/signUp"  element={<SignUpPage />} />
       <Route path="/signIn" element={<SignInPage />} />
       <Route path="/forgot-password" element={<ForgotPasswordPage />} />
       <Route path="/users/verify/success" element={<VerifyEmailPage />} />
         <Route path="/forgot-password/:token" element={<RecoverPasswordPage />} />
 
-<Route path="/" element={<SharedLayout />}>
-<Route path='/recommended' element={<RecommendedPage />} />
+
+
 <Route path="/library" element={<LibraryPage />} />
-        <Route path="/reading" element={<ReadingPage />} /> */}
+        <Route path="/reading" element={<ReadingPage />} />
+
+        </Route>
+
+      <Route path="*" element={<ErrorPage />} /> */}
+
