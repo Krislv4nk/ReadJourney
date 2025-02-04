@@ -6,7 +6,6 @@ import {selectAuthVerified} from '../../redux/auth/selectors.js';
 import { successToast, errorToast} from '../../helpers/services';
 
 
-import Container from "../../components/SharedLayout/Container/Container";
 import { AuthBackground } from "../../components/Auth/AuthBackground/AuthBackground";
 import { AuthForm } from "../../components/Auth/AuthForm/AuthForm";
 
@@ -33,10 +32,10 @@ const SignUpPage = () => {
   };
   return (
     
-      <Container>
+      <>
       <AuthBackground />
       <AuthForm  onSubmit={handleAuthSubmit} isSignUp={true}/>
-      </Container>
+      </>
     
   );
 };

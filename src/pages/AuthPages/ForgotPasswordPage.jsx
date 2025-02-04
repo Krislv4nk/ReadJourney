@@ -4,7 +4,6 @@ import { errorToast, successToast } from '../../helpers/services';
 import { forgotPassword } from '../../redux/auth/operations';
 import { useNavigate } from 'react-router-dom';
 
-import Container from "../../components/SharedLayout/Container/Container";
 import {AuthBackground} from "../../components/Auth/AuthBackground/AuthBackground";
 import { AuthForm } from "../../components/Auth/AuthForm/AuthForm";
 
@@ -24,10 +23,10 @@ const ForgotPasswordPage = () => {
     });
   };
   return (
-    <Container>
+    <>
       <AuthBackground />
       <AuthForm isForgotPassword={true} onSubmit={handleAuthSubmit}/>
-      </Container>
+      </>
   );
 };
 

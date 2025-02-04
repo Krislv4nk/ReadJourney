@@ -1,4 +1,4 @@
-import Container from "../../components/SharedLayout/Container/Container";
+
 import { AuthBackground } from "../../components/Auth/AuthBackground/AuthBackground";
 import { QuoteBlock } from '../../components/Dashboard/Recommended/QuoteBlock/QuoteBlock';
 import { useNavigate } from 'react-router-dom';
@@ -11,7 +11,7 @@ const WelcomePage = () => {
         navigate('/signup');
     }
     return (
-        <Container>
+        <>
       <AuthBackground showTitle={false}/>
       <div className={css.welcomeWrapper}>
       <h1 className={css.welcomeTitle}>Welcome to ReadJourney!<br/> <span className={css.welcomeTitleSpan}>Dive into the world of books!</span></h1>
@@ -20,7 +20,7 @@ const WelcomePage = () => {
       </button>
       <QuoteBlock />
       </div>
-      </Container>
+      </>
     )
 }
 

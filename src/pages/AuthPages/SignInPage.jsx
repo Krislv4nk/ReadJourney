@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { signinUser } from '../../redux/auth/operations';
 import { selectAuthIsSignedIn } from '../../redux/auth/selectors';
 
-import Container from "../../components/SharedLayout/Container/Container";
+
 import { AuthBackground } from "../../components/Auth/AuthBackground/AuthBackground";
 import { AuthForm } from "../../components/Auth/AuthForm/AuthForm";
 
@@ -32,10 +32,10 @@ const SignInPage = () => {
   };
 
   return (
-    <Container>
+    <>
       <AuthBackground />
       <AuthForm isSignUp={false} isForgotPassword={false} isRecoverPassword={false} onSubmit={handleAuthSubmit} />
-    </Container>
+    </>
   );
 };
 
