@@ -22,8 +22,8 @@ import ReadingPage from './pages/ReadingPage/ReadingPage';
 import VerifyEmailPage from './pages/AuthPages/VerifyEmailPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 
-import PrivateRoute from './components/Routes/PrivateRoute/PrivateRoute';
-import PublicRoute from './components/Routes/PublicRoute/PublicRoute';
+// import PrivateRoute from './components/Routes/PrivateRoute/PrivateRoute';
+// import PublicRoute from './components/Routes/PublicRoute/PublicRoute';
 
 // import.meta.env.VITE_BASE_URL;
 
@@ -41,7 +41,7 @@ function App() {
         <Route path="/" element={<SharedLayout />}>
         <Route index element={<WelcomePage />} />
 
-        {/* <Route path="signUp"  element={<SignUpPage />} />
+        <Route path="signUp"  element={<SignUpPage />} />
       <Route path="signIn" element={<SignInPage />} />
       <Route path="forgot-password" element={<ForgotPasswordPage />} />
       <Route path="users/verify/success" element={<VerifyEmailPage />} />
@@ -50,9 +50,9 @@ function App() {
 
 <Route path='/recommended' element={<RecommendedPage />} />
 <Route path="/library" element={<LibraryPage />} />
-        <Route path="/reading" element={<ReadingPage />} /> */}
+        <Route path="/reading" element={<ReadingPage />} />
 
-        <Route path="signup"  element={<PublicRoute><SignUpPage /></PublicRoute>} />
+        {/* <Route path="signup"  element={<PublicRoute><SignUpPage /></PublicRoute>} />
       <Route path="signin" element={<PublicRoute><SignInPage /></PublicRoute>} />
       <Route path="forgot-password" element={<PublicRoute><ForgotPasswordPage /></PublicRoute>} />
       <Route path="users/verify/success" element={<PublicRoute><VerifyEmailPage /></PublicRoute>} />
@@ -60,7 +60,7 @@ function App() {
         
         <Route path='/recommended' element={<PrivateRoute><RecommendedPage /></PrivateRoute>} />
         <Route path="/library" element={<PrivateRoute><LibraryPage /></PrivateRoute>} /> 
-        <Route path= "/reading" element={<PrivateRoute><ReadingPage/></PrivateRoute>}/>
+        <Route path= "/reading" element={<PrivateRoute><ReadingPage/></PrivateRoute>}/> */}
         </Route>
 
       <Route path="*" element={<ErrorPage />} /> 
